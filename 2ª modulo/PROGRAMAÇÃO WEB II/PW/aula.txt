@@ -1,0 +1,95 @@
+﻿
+
+--------------------------------------------------------------------------------
+aula do dia 07/06
+--------------------------------------------------------------------------------
+bit é zero ou um
+zero não disponivel e 1 disponivel
+colocar index em cada pasta da pagina principal
+criar uma constante que vai armazenar o banco de dados
+pdo é uma classe de php abstrata
+concatenar no php .
+são tres parametros
+variavel de ambiente para enconder no banco de dados
+GET E POST
+METODO GET SERVE PRA PEGAR DADOS DE CADASTRO QUE JA EXISTE
+ULTILIZA O METODO POST PARA CADASTRO PORQUE ESTA CRIANDO UMA SESSÃO PARA USUARIO
+USO POST QUANDO VOU CRIAR UM RECURSO
+USO GET QUANDO VOU ACESSAR UM RECURSO
+ACTION PRA ONDE O FORMULARIO VAI MANDAR OS DADOS
+RIQUIRE_ONCE QUANDO DAR ERRO ELE PARA
+INCLUDE_ONCE MESMO DANDO ERRO ELE NÃO PARAR
+
+ FUNÇÃO extract ELA EXTRAI DE UMA ARRAY RELATIVO TEM QUE SER COM ARRAY ASSOCIATIVO
+extract CRIAR UMA VARIAVEL QUE ESTA NO ATRIBUTO NAME
+BINDVALUE TROCA O VALOR
+ELE DETECTA ASPA
+ELE COLOCA UMA CONTRA BARRA E NÃO IRÁ EXECUTAR
+EX 'SELECT * FROM CLIENTES';
+
+ELE COLOCARÁ A BARRA
+EX \'SELECT * FROM CLIENTES\'; E NÃO VAI EXECUTAR POR QUE RECONHECERÁ COMO STRING
+
+<meta http-equiv="refresh" content="0; url=http://example.com">
+ http-equiv="refresh" vai levar para um navegador
+content="0; é o tempo que demora pra ir em segundos
+
+query tudo que tive dentro ja executa
+quando tiver o select sem o where pode usar o query
+
+transformar consuta legivel em php usar o metodo fetchall 
+(o tipo de formato que a consulta vai ter ou uma array asssociativo ou array de objeto)
+objeto é chamado com ->
+
+FOR PRECISA SABER O TAMANHO DO ARRAY
+
+FOREACH JA TEM O TAMANHO
+
+
+<php echo e <?= são a mesma coisa
+
+*****************************************************************************************************************
+
+
+
+
+
+Bit (0 ou 1):
+Um bit é a menor unidade de informação em computação.
+Representa um valor binário: 0 (desligado) ou 1 (ligado).
+É usado para representar informações como disponibilidade, ativação ou desativação.
+Constantes e Variáveis:
+Uma constante é um valor fixo que não pode ser alterado durante a execução do programa.
+Uma variável é um espaço de memória que pode armazenar valores mutáveis.
+No PHP, você pode definir constantes usando const e variáveis usando $.
+PDO (PHP Data Objects):
+É uma classe abstrata no PHP para interagir com bancos de dados.
+Permite conexões seguras e execução de consultas SQL.
+Você pode usar diferentes drivers (por exemplo, MySQL, PostgreSQL) com o PDO.
+Métodos HTTP (GET e POST):
+GET: Usado para recuperar dados do servidor. Parâmetros são enviados na URL.
+POST: Usado para enviar dados ao servidor (por exemplo, formulários). Os dados não aparecem na URL.
+Formulários HTML:
+O atributo action especifica para onde os dados do formulário serão enviados.
+Use method="post" para criar uma sessão (por exemplo, ao cadastrar um usuário).
+Requerimento de Arquivos:
+require_once: Inclui um arquivo e para a execução se houver erro.
+include_once: Inclui um arquivo, mas continua a execução mesmo se houver erro.
+Função extract:
+Extrai variáveis de um array associativo.
+Útil para criar variáveis a partir dos atributos name de um formulário.
+Prevenção de SQL Injection:
+Use bindValue para evitar injeção de código malicioso em consultas SQL.
+Ele trata caracteres especiais (como aspas) corretamente.
+Redirecionamento HTML:
+<meta http-equiv="refresh" content="0; url=http://example.com">
+Redireciona automaticamente para http://example.com após 0 segundos.
+Execução de Consultas SQL:
+Use query para executar consultas SQL.
+SELECT * FROM CLIENTES retorna todos os registros da tabela “clientes”.
+Laços de Repetição:
+for: Precisa saber o tamanho do array.
+foreach: Itera automaticamente sobre os elementos de um array.
+Sintaxe PHP:
+<?php, <?=, e <? são equivalentes para iniciar blocos de código PHP.
+echo e <?= ... ?> são usados para exibir conteúdo na página.

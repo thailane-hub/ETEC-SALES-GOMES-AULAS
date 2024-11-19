@@ -1,0 +1,590 @@
+{## ExercÃ­cio 4.1
+Declare um array de 10 nÃºmeros inteiros. Preencha-o com valores e, em seguida, exiba a soma de todos os elementos.}
+
+Program HelloWorld(output);
+
+var numero: array[1..10] of integer;
+soma,resultado,inicio,fim,i:integer;
+
+begin
+
+inicio:=1;
+fim:=10;
+    writeln('Declare 10 nÃºmeros inteiros, em seguida, serÃ¡ exibido a soma de todos os nÃºmeros.');
+    for i:= inicio to fim do
+    begin
+        write('Informe o ',i,' Âº numero: ');
+        read(numero[i]);
+        resultado:= resultado+numero[i];
+    end;
+
+    write('A soma dos numeros informados Ã©: ',resultado);
+
+end.
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+{# ExercÃ­cio 4.2
+Declare um array de 5 nÃºmeros reais. Preencha-o com os valores, e em seguida, exiba a mÃ©dia dos valores.}
+
+Program HelloWorld(output);
+
+var numero: array[1..5] of real;
+    media,resultado: real;
+    inicio,fim,i:integer;
+begin
+
+inicio:=1;
+fim:=5;
+
+    writeln('Declare 5 nÃºmeros reais, e em seguida, serÃ¡ exibido a mÃ©dia dos valores.');
+    
+    for i:= inicio to fim do
+    begin
+        write('informe o ',i,' Âº numero: ');
+        read(numero[i]);
+        resultado:=resultado+numero[i]/5;
+    end;
+    
+    write('A mÃ©dia dos nÃºmeros informados Ã©: ',resultado:0:2)
+    
+end.
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+{# ExercÃ­cio 4.3
+Declare um array com 10 nÃºmeros. Preencha-o com os valores, e em seguida, faÃ§a uma pesquisa de um valor, se ele existe ou nÃ£o no array, com base no valor que o usuÃ¡rio digitou.}
+
+Program HelloWorld(output);
+
+var numero: array[1..10] of integer;
+    pesquisa,inicio,fim,i:integer;
+    verificador: boolean;
+    
+begin
+
+inicio:=0;
+fim:=9;
+verificador:= false;
+
+numero[0]:=1;
+numero[1]:=2;
+numero[2]:=3;
+numero[3]:=4;
+numero[4]:=5;
+numero[5]:=6;
+numero[6]:=7;
+numero[7]:=8;
+numero[8]:=9;
+numero[9]:=10;
+
+
+    writeln('FaÃ§a uma pesquisa de um valor, se ele existe ou nÃ£o no array');
+    write('Informe o numero desejado: ');
+    read(pesquisa);
+    
+    
+    for i:= inicio to fim do
+    begin
+        if pesquisa = numero[i] then
+        begin
+            verificador:= true;
+        end;
+    end;
+    
+    if verificador then
+    begin
+        write('Este numero esta presente');
+    end
+    
+    else
+    begin
+        write('Este numero nÃ£o esta presente');
+    end;
+end.
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+{# ExercÃ­cio 4.4
+Declare dois arrays com 5 elementos cada. Preencha o primeiro array com os valores, e em seguida, faÃ§a um algoritmo para transportar todos os valores para o outro array. Exiba os dois arrays logo em seguida.}
+
+Program HelloWorld(output);
+
+var elemento,elemento2: array[1..5] of integer;
+    inicio,fim,i:integer;
+
+begin
+
+inicio:=0;
+fim:=4;
+
+elemento[0]:=1;
+elemento[1]:=2;
+elemento[2]:=3;
+elemento[3]:=4;
+elemento[4]:=5;
+
+        writeln('Array 1:');
+    for i:= inicio to fim do
+    begin
+        elemento2[i] := elemento[i];
+        write(' ',elemento[i]);
+    end;
+    
+        writeln('');
+        writeln(' Array 2:');
+    
+    for i:= inicio to fim do
+    begin
+        write (' ',elemento2[i]);
+    end;
+end.
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+{# ExercÃ­cio 4.5
+Declare um array do tipo nÃºmero real para compor uma matriz 4 x 4. Preencha os valores e exiba a matriz logo em seguida.
+Ex:
+1   2   2  6
+3  4   1   8
+2  4   5   4
+2  3   4   5}
+
+Program HelloWorld(output);
+
+var numero: array[1..4,1..4] of integer;
+    i,j,inicio,fim:integer;
+
+begin
+
+inicio:=1;
+fim:=4;
+
+    for i:=inicio to fim do
+    begin
+        for j:=inicio to fim do
+        begin
+            write('Informe o ',j,'Âº numero: ');
+            read(numero[i,j]);
+        end;    
+    end;
+    
+     for i:= inicio to fim do
+    begin
+        for j:= inicio to fim do
+        begin
+            write(numero[i,j], ' ');
+        end;
+        writeln('');
+    end;
+end.
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+{## Exercício 4.6
+Faça um programa que irá fazer a soma de duas matrizes 2 x 2.}
+
+Program HelloWorld(output);
+
+var i,j,inicio,fim: integer;
+
+matriz: array[1..2,1..2] of integer;
+matriz1: array[1..2,1..2] of integer;
+matrizSoma: array[1..2,1..2] of integer;
+    
+
+begin
+inicio:=1;
+fim:=2;
+
+    writeln('SOMA DE DUAS MATRIZES 2 x 2');
+    writeln('----------------------');
+    for i:=inicio to fim do
+    begin
+        for j:= inicio to fim do
+        begin
+            write('informe o numero da primeira matriz: ');
+            readln(matriz[i,j]);
+        end;
+        writeln;
+    end;
+    writeln('----------------------');
+    
+    for i:=inicio to fim do
+    begin
+        for j:= inicio to fim do
+        begin
+            write('informe o numero da segunda matriz: ');
+            readln(matriz1[i,j]);
+        end;
+        writeln;
+    end;
+    writeln('----------------------');
+    writeln('1º MATRIZ');
+    for i:=inicio to fim do
+    begin
+        for j:= inicio to fim do
+        begin
+            write(matriz[i,j],' ');
+        end;
+        writeln;
+    end;
+    
+    writeln('----------------------');
+    writeln('2º MATRIZ');
+    for i:=inicio to fim do
+    begin
+        for j:= inicio to fim do
+        begin
+            write(matriz1[i,j],' ');
+        end;
+        writeln;
+    end;
+    writeln('----------------------');
+    writeln('SOMA DAS MATRIZES');
+    
+        for i:=inicio to fim do
+    begin
+        for j:= inicio to fim do
+        begin
+            matrizSoma[i,j]:=matriz[i,j]+matriz1[i,j];
+            write(matrizSoma[i,j],' ');
+        end;
+        writeln;
+    end;
+
+    
+end.
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+
+{# VariÃ¡veis Compostas HeterogÃªneas
+## ExercÃ­cio 4.7
+Crie um programa que irÃ¡ cadastrar um cliente e exiba seus dados logo em seguida:
+- CÃ³digo do Cliente
+- Nome do Cliente
+- RG
+- Telefone
+- EndereÃ§o
+- CEP}
+
+Program HelloWorld(output);
+uses crt;{para usar o comando limpa tela}
+var
+    cadastro: record
+        nome: string[30];
+        rg:string[9];
+        telefone:string[9];
+        endereco:string[40];
+        cep:string[8];
+    end;
+
+begin
+  writeln('CADASTRAR CLIENTE');
+  write('Informe o nome do cliente: ');
+  readln(cadastro.nome);
+  write('Informe o RG do cliente: ');
+  readln(cadastro.rg);
+  write('Informe o telefone do cliente: ');
+  readln(cadastro.telefone);
+  write('Informe o endereÃ§o do cliente: ');
+  readln(cadastro.endereco);
+  write('Informe o cep: ');
+  readln(cadastro.cep);
+  
+  clrscr;{comando limpa tela}
+  
+  writeln('DADOS DO CLIENTE');
+  writeln('nome do cliente: ',cadastro.nome);
+  writeln('RG: ',cadastro.rg);
+  writeln('Telefone: ',cadastro.telefone);
+  writeln('EndereÃ§o: ',cadastro.endereco);
+  writeln('Cep: ',cadastro.cep);
+  readln();{este read ln segura o programa aberto em vez de encerralo ate que se pressione qualquer tecla}
+  
+end.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+{## ExercÃ­cio 4.8
+
+Crie um programa que irÃ¡ cadastrar um aluno e calcular a pontuaÃ§Ã£o. O programa deverÃ¡ exibir logo em seguida se o aluno foi aprovado ou reprovado.
+
+- Nome do Aluno
+- Nota de PortuguÃªs
+- Nota de MatemÃ¡tica
+- Nota de InglÃªs
+
+Se a mÃ©dia for maior ou igual a 7 aluno estarÃ¡ aprovado, senÃ£o reprovado.}
+
+Program HelloWorld(output);
+
+var media:real;
+    cadastro: record
+        nomeAluno:string[30];
+        nota1:real;
+        nota2:real;
+        nota3:real;
+    end;
+
+begin
+  
+  writeln('CADASTRAR NOTAS DO ALUNO');
+  writeln('-------------------------');
+  write('Informe o nome do aluno: ');
+  read(cadastro.nomeAluno);
+  write('informe a nota de portugues: ');
+  read(cadastro.nota1);
+  write('informe a nota de matemÃ¡tica: ');
+  read(cadastro.nota2);
+  write('informe a nota inglÃªs: ');
+  read(cadastro.nota3);
+  
+  
+  media:=(cadastro.nota1+cadastro.nota2+cadastro.nota3)/3;
+  
+  if media >=7 then
+  begin
+    writeln('-------------------------');
+    write('Aprovado com mÃ©dia: ',media:0:2,' seu calabreso');
+  end
+  
+  else
+  begin
+    writeln('-------------------------');
+    write('Reprovado com mÃ©dia: ',media:0:2,' Idiota');
+  end;
+  
+end.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+{## Exercício 4.9
+
+Crie um programa que irá cadastrar 3 funcionários vendedores:
+
+- Nome
+- Cargo
+- Valor das Vendas
+- Percentual de Bônus
+- Presente
+
+Exiba os funcionários cadastrados logo em seguida.}
+
+Program HelloWorld(output);
+
+var inicio,fim,i:integer;
+    
+    cadastro: array[1..3] of record
+    nome:string[30];
+    cargo:string[30];
+    valor_venda:real;
+    bonus:string[6];
+    presente:string[20];
+    end;
+
+begin
+    
+inicio:=1;
+fim:=3;
+    
+    writeln('BEM VINDO AO CADASTRO DE FUNCIONÁRIO');
+    
+    for i:=inicio to fim do
+    begin
+      writeln('CADASTRO FUNCIONÁRIO ',i,'º: ');
+      write('Informe o nome do funcionario: ');
+      readln(cadastro[i].nome);
+      write('Informe o cargo: ');
+      readln(cadastro[i].cargo);
+      write('Informe o valor das vendas: ');
+      readln(cadastro[i].valor_venda);
+      write('Informe o bonus: ');
+      readln(cadastro[i].bonus);
+      write('Informe o presente: ');
+      readln(cadastro[i].presente);
+    end;
+    
+    for i:=inicio to fim do
+    begin
+      writeln('DADOS DO FUNCIONÁRIO ',i,'º: ');
+      writeln('NOME: ',cadastro[i].nome);
+      writeln('CARGO: ',cadastro[i].cargo);
+      writeln('VALOR DE VENDAS: ',cadastro[i].valor_venda:0:2);
+      writeln('BôNUS: ',cadastro[i].bonus);
+      writeln('PRESENTE: ',cadastro[i].presente);
+    end;
+end.
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+{## Exercício 4.10
+Exiba logo em seguida todos os vendedores com base nos critérios:
+- Se valor das vendas maior que 2000, então o vendedor irá ganhar uma Bicicleta Barra Forte
+- Se o valor das vendas entre 1000 e 1999, então o vendedor irá ganhar um urso de pelúcia
+- Se vendas menores que 1000, então ganhará um abraço.}
+
+Program HelloWorld(output);
+
+var inicio,fim,i:integer;
+    
+    cadastro: array[1..3] of record
+    nome:string[30];
+    cargo:string[30];
+    valor_venda:real;
+    bonus:string[6];
+    presente:string[30];
+    end;
+
+begin
+    
+inicio:=1;
+fim:=3;
+    
+    writeln('BEM VINDO AO CADASTRO DE FUNCIONÁRIO');
+    writeln('-------------------------------------');
+    
+    for i:=inicio to fim do
+    begin
+      writeln('-------------------------------------');
+      writeln('CADASTRO FUNCIONÁRIO ',i,'º: ');
+      write('Informe o nome do funcionario: ');
+      readln(cadastro[i].nome);
+      write('Informe o cargo: ');
+      readln(cadastro[i].cargo);
+      write('Informe o valor das vendas: ');
+      readln(cadastro[i].valor_venda);
+      write('Informe o bonus: ');
+      readln(cadastro[i].bonus);
+      
+      if (cadastro[i].valor_venda >= 2000) then
+      begin
+            cadastro[i].presente:= 'BICICLETA BARRA FORTE';
+      end;
+      
+      if ((cadastro[i].valor_venda >=1000) AND (cadastro[i].valor_venda<=1999)) then
+      begin
+            cadastro[i].presente:= 'URSO DE PELUCIA';
+      end;
+      
+      if (cadastro[i].valor_venda < 1000) then
+      begin
+            cadastro[i].presente:= 'ABRAÇO';
+      end;
+      
+    end;
+    
+    for i:=inicio to fim do
+    begin
+        
+      writeln('-------------------------------------');
+      writeln('DADOS DO FUNCIONÁRIO ',i,'º: ');
+      writeln('NOME: ',cadastro[i].nome);
+      writeln('CARGO: ',cadastro[i].cargo);
+      writeln('VALOR DE VENDAS: ',cadastro[i].valor_venda:0:2);
+      writeln('BôNUS: ',cadastro[i].bonus);
+      writeln('PRESENTE: ',cadastro[i].presente);
+    end;
+end.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+{## Exercício 4.11
+Crie um programa que irá cadastrar 3 alunos contendo menções de PW, BD, DS, SE. Faça as operações para exibir se o aluno foi aprovado ou reprovado com base nas menções MB, B, R, I  e exiba todas as informações logo em seguida.}
+
+Program HelloWorld(output);
+
+var aluno: array[1..3] of record
+    nome: string[30];
+    pw: string;
+    bd: string;
+    ds: string;
+    se: string;
+end;
+
+i,inicio,fim:integer;
+
+procedure entrada;
+begin
+
+inicio:=1;
+fim:=3;
+
+    for i:= inicio to fim do
+    begin
+        write('INFORME O NOME ',i,'º DO ALUNO: ');
+        readln(aluno[i].nome);
+        write('INFORME A MENÇÃO DE PW: ');
+        readln(aluno[i].pw);
+        write('INFORME A MENÇÃO DE BD: ');
+        readln(aluno[i].bd);
+        write('INFORME A MENÇÃO DE DS: ');
+        readln(aluno[i].ds);
+        write('INFORME A MENÇÃO DE SE: ');
+        readln(aluno[i].se);
+        writeln('------------------------------');
+    end;
+end;
+
+procedure processamento;
+begin
+inicio:=1;
+fim:=3;
+    for i:=inicio to fim do
+    begin
+        writeln('NOTAS DO ALUNO ',aluno[i].nome,'');
+        if (aluno[i].pw = 'mb') or (aluno[i].pw = 'b') or (aluno[i].pw = 'r')  then
+        begin
+            writeln('PW: ',aluno[i].pw,' , Aprovado !!!');
+        end
+        
+        else
+        begin
+            Writeln('PW: ',aluno[i].pw,' , Reprovado !!!');
+        end;
+        
+        if (aluno[i].bd = 'mb') or (aluno[i].bd = 'b') or (aluno[i].bd = 'r')  then
+        begin
+            writeln('BD: ',aluno[i].bd,' , Aprovado !!!');
+        end
+        
+        else
+        begin
+            Writeln('BD: ',aluno[i].bd,' , Reprovado !!!');
+        end;
+        
+        if (aluno[i].ds = 'mb') or (aluno[i].ds = 'b') or (aluno[i].ds = 'r')  then
+        begin
+            writeln('DS: ',aluno[i].ds,' , Aprovado !!!');
+        end
+        
+        else
+        begin
+            Writeln('DS: ',aluno[i].ds,' , Reprovado !!!');
+        end;
+        
+        if (aluno[i].se = 'mb') or (aluno[i].se = 'b') or (aluno[i].se = 'r')  then
+        begin
+            writeln('SE: ',aluno[i].se,' , Aprovado !!!');
+        end
+        
+        else
+        begin
+            Writeln('SE: ',aluno[i].se,' , Reprovado !!!');
+        end;
+        writeln('------------------------------');
+    end;
+end;
+
+
+begin
+    writeln('CADASTRO DE ALUNOS E NOTAS');
+    writeln('------------------------------');
+    writeln;
+
+entrada;
+processamento;
+end.
+
+
+
+

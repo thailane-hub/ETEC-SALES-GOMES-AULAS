@@ -1,0 +1,124 @@
+
+
+.btn img{
+    height: 25px;
+    width: 25px;
+}
+
+.descricao img{
+    height: 300px;
+    width: auto;
+}
+
+.descricao{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    height: auto;
+    width: 300px;
+}
+
+
+.item:hover > .opcoes{
+    visibility: visible;
+    transform: translateY(0px);
+    opacity: 1;
+    top: 0;
+    left: 0;
+}
+
+    .item{
+        position: relative;
+    }
+
+.opcoes{
+    display: flex;
+    flex-direction: column;
+    right: 0;
+}
+
+    .item .opcoes{
+        position: absolute;
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    .op-lateral{
+        display: flex;
+        align-items: end;
+        padding-right: 2rem;
+        padding-top: 2rem;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .op-lateral .btn{
+        width: 45px;
+        height: 45px;
+        background-color: #cccd;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .opcoes .btn-add{
+        margin: auto;
+        margin-top: 180px;
+        background-color: #cccd;
+        width: 80%;
+        padding: 15px;
+        text-align: center;
+    }
+
+    .lista{
+        display: flex;
+        height:auto;
+        width: 100%;
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        padding-bottom: 100px;
+    }
+    .preco-antigo{
+        text-decoration: line-through;
+        color: rgba(138, 135, 135, 0.867);
+    }
+
+
+    /* ------------------------------------------------------tabela----------------------------------------------- */
+
+    .produtos{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-evenly;
+    }
+    .tabela img{
+        height: 120px;
+    }
+    .caixa{
+        background-color: blueviolet;
+        height: 250px;
+        width: 250px;
+    }
+
+    .produtos_main{
+        margin-bottom: 50px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+
+    td,th{
+        text-align: center;
+        padding:0rem 2rem 0rem 2rem;
+        border-bottom: 1px solid white;
+    }
+
+    .td-imagem{
+        width: 120px;
+        margin: 1rem 1rem 1rem 1rem;
+    }

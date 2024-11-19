@@ -1,0 +1,351 @@
+{1 - Crie um type contendo os valores pessoa física ou pessoa jurídica. 
+
+Crie uma variável tipo_pessoa para receber esse type. 
+
+Faça um IF para analisar e responder se o tipo_pessoa é pessoa física ou jurídica.}
+
+Program HelloWorld(output);
+type
+    tipo_pessoa = (juridica, fisica);
+    
+
+var 
+    tipo_clientef: tipo_pessoa;
+    tipo_clientej: tipo_pessoa;
+    resultado: string;
+    
+begin
+    tipo_clientef:= fisica;
+    tipo_clientej:= juridica;
+        writeln('Qual seu Tipo CPF ou PJ?');
+        read(resultado);
+        
+    if (resultado = 'CPF') then
+     begin
+        writeln('PESSOA ',tipo_clientef);
+     end;
+     
+    if (resultado =  'PJ ') then
+    begin
+        writeln('JURIDICA ',tipo_clientej);
+    end;
+        
+end.
+
+
+************************************************************************************************************************************************
+
+{ 2 - Crie um type aluno contendo os dados: Nome, RM, Telefone, Email..}
+
+Program HelloWorld(output);
+type
+    tipo_aluno = record
+        nome        : string[40];
+        telefone    :string[11];
+        rm          :string[5];
+        
+    end;
+    
+
+var 
+    alunos           :array[1..3] of tipo_aluno;
+    i               :integer;
+    inicio,fim      :integer;
+    
+begin
+   inicio:=1;
+   fim:=3;
+   
+   for i := inicio to fim do
+     begin
+     writeln('Digite o nome ');
+     readln(alunos[i].nome);
+     writeln('Digite o telefone ');
+     readln(alunos[i].telefone);
+     writeln('Digite o rm ');
+     readln(alunos[i].rm);
+     writeln('************************************************');
+     end;
+        for i := inicio to fim do
+     begin
+     writeln('nome do: ', alunos[i].nome);
+     writeln('nome do: ', alunos[i].telefone);
+     writeln('Digite o rm ', alunos[i].rm);
+     end;
+end.
+************************************************************************************************************************************************
+
+{ 3 - Crie um algoritmo que irá cadastrar 2 veículos. Os types que deverão ser criados irão abranger:
+
+- carro
+- caminhao
+- onibus
+- aviao
+- trem
+- barco
+- balao
+- helicoptero
+- gasolina
+- etanol
+- flex
+- passeio
+- esportivo
+- novo
+- usado}
+
+Program HelloWorld(output);
+type
+    tipo_veiculo    =   (carro,caminhao, onibus, trem, barco, balao, helicoptero);
+    tipo_motor      =   (gasolina, etanol, flex) ;
+    estilo_carro    =   (passeio, esportivo);
+    estado          =   (usado, novo);
+    
+    
+
+var 
+    automotivo          :array[1..2] of record
+        tipo            :tipo_veiculo;
+        motor           :tipo_motor;
+        carro           :estilo_carro;
+        uso             :estado;
+    end;
+    
+    inicio,fim,i      :integer;
+    
+begin
+   inicio:=1;
+   fim:=2;
+   
+    for i := inicio to fim do
+    begin
+        writeln('DADOS DO ',i,'º VEICULO');
+        writeln();
+         writeln('Digite o tipo (carro,caminhao,ônibus,trem,barco,balao,helicoptero) ');
+         readln(automotivo[i].tipo);
+         writeln('Digite o tipo do motor (gasolina,eltanol ou flex) ');
+         readln(automotivo[i].motor);
+         writeln('passeio ou espotivo? ');
+         readln(automotivo[i].carro);
+          writeln('novo ou usado? ');
+         readln(automotivo[i].uso);
+     
+     writeln('************************************************');
+     
+    end;
+    
+    for i := inicio to fim do
+    begin
+         writeln();
+         writeln('DADOS DO ',i,'º VEICULO');
+         writeln();
+         writeln('tipo do carro: ', automotivo[i].tipo);
+         writeln('tipo do motor: ', automotivo[i].motor);
+         writeln('estilo: ', automotivo[i].carro);
+         writeln('estado: ', automotivo[i].uso);
+    end;
+end.
+
+
+************************************************************************************************************************************************
+
+{4 - Crie um type chamado "cor" que representa as cores primárias. Crie um programa que peça ao usuário para escolher uma cor e imprima uma mensagem personalizada com base na cor escolhida.}
+
+
+
+Program HelloWorld(output);
+type
+   cores = (amarelo,vermelho,azul,verde);
+  
+var
+    cor  :cores;
+    cor_amarelo,cor_vermelha,cor_azul,cor_verde:string;
+    
+    
+begin
+    writeln('Digite a cor desejada!');
+         readln(cor);
+         
+     cor_amarelo   :=   'A amizade desenvolve a felicidade e reduz o sofrimento, duplicando a nossa alegria e dividindo a nossa dor.';
+    
+    cor_vermelha      :=   'Perder tempo em aprender coisas que não interessam pri-vanos de descobrir coisas interessantes.' ;
+    
+    cor_azul    :=   'Faça o que for necessário para ser feliz. Mas não se esqueça que a felicidade é um sentimento simples, você pode encontrá-la e deixá-la ir embora por não perceber sua simplicidade.';
+    
+    cor_verde := 'Nunca deixe ninguém te dizer que não pode fazer alguma coisa. Se você tem um sonho tem que correr atrás dele. As pessoas não conseguem vencer e dizem que você também não vai vencer. Se você quer uma coisa corre atrás.';
+    
+      if cor = amarelo then
+    begin
+    writeln(cor_amarelo);
+    end;
+    
+    if cor = vermelho then
+    begin
+    writeln(cor_vermelha);
+    end;
+    
+    if cor = azul then
+    begin
+    writeln(cor_azul);
+    end;
+    
+    if cor = verde then
+    begin
+    writeln(cor_verde);
+    end;
+end.
+
+
+
+************************************************************************************************************************************************
+
+
+{4 -5 - Crie um type chamado "fruta" que representa várias frutas. Crie um pequeno programa que peça ao usuário para escolher uma fruta e então imprima uma mensagem informando se a fruta escolhida está disponível ou não. Utilize for, procedures..}
+
+
+
+Program HelloWorld(output);
+type
+   fruta = (melao,laranja,melancia,banana,manga,abacaxi,pessego,maca,pera);
+  
+var
+    frutas           :fruta;
+    inicio,fim,i    :integer;
+    
+    procedure entrada_dados;
+    begin
+        Writeln('Digite a fruta desejada');
+        readln(frutas);
+    end;
+    
+    procedure calculo_dados;
+    begin
+       if frutas = melao then
+       begin
+        writeln('Não temos em estoque!');
+       end;
+          if frutas = laranja then
+       begin
+        writeln('Não temos em estoque!');
+       end;
+          if frutas = melancia then
+       begin
+        writeln('Não temos em estoque!');
+       end;
+          if frutas = banana then
+       begin
+        writeln('Não temos em estoque!');
+       end;
+          if frutas = manga then
+       begin
+        writeln('temos em estoque!');
+       end;
+           if frutas = abacaxi then
+       begin
+        writeln('temos em estoque!');
+       end;
+           if frutas = pessego then
+       begin
+        writeln('temos em estoque!');
+       end;
+           if frutas = maca then
+       begin
+        writeln('temos em estoque!');
+       end;
+           if frutas = pera then
+       begin
+        writeln('temos em estoque!');
+       end;
+       
+    end;
+    
+begin
+
+    
+         entrada_dados;
+         calculo_dados;
+
+end.
+
+
+
+
+************************************************************************************************************************************************
+
+
+{4 -5 -6 - Crie um type chamado "animal" que representa vários animais. Crie um programa que peça ao usuário para escolher um animal e imprima uma mensagem com uma curiosidade sobre o animal escolhido. Utilize array, record, procedure, for, if, etc.}
+
+
+
+Program HelloWorld(output);
+type
+   animais = (foca,tartaruga,leao,elefante,macaco,marmota);
+  
+var
+    animal          :animais;
+    
+    procedure entrada_dados;
+    begin
+        Writeln('Digite o animal');
+        readln(animal);
+    end;
+    
+    procedure calculo_dados;
+    begin
+       if frutas = melao then
+       begin
+        writeln('Não temos em estoque!');
+       end;
+          if frutas = laranja then
+       begin
+        writeln('Não temos em estoque!');
+       end;
+          if frutas = melancia then
+       begin
+        writeln('Não temos em estoque!');
+       end;
+          if frutas = banana then
+       begin
+        writeln('Não temos em estoque!');
+       end;
+          if frutas = manga then
+       begin
+        writeln('temos em estoque!');
+       end;
+           if frutas = abacaxi then
+       begin
+        writeln('temos em estoque!');
+       end;
+           if frutas = pessego then
+       begin
+        writeln('temos em estoque!');
+       end;
+           if frutas = maca then
+       begin
+        writeln('temos em estoque!');
+       end;
+           if frutas = pera then
+       begin
+        writeln('temos em estoque!');
+       end;
+       
+    end;
+    
+begin
+        foca := 'Sabia que as focas não possuem orelhas externas, e suas nadadeiras posteriores não podem ser projetadas para frente.';
+        
+        tartaruga := 'Sabia que As tartarugas marinhas podem viver entre 150 e 200 anos, dependendo da espécie.';
+        
+        leao := 'Sabia que o leão é o segundo maior felino do mundo, o leão perde em tamanho apenas para o tigre.';
+        
+        elefante := 'Sabia que os elefantes são os que têm o cérebro maior, sendo três a quatro vezes maior do que o de um humano;';
+        
+     elefante := 'Sabia que os elefantes são os que têm o cérebro maior, sendo três a quatro vezes maior do que o de um humano;';
+
+
+    
+         entrada_dados;
+         calculo_dados;
+
+end.
+
+************************************************************************************************************************************************

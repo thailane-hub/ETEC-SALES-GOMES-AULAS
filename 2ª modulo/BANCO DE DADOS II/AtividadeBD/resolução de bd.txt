@@ -1,0 +1,40 @@
+1) Conte a quantidade de alunos do sexo feminino usando as cláusulas COUNT e WHERE.	
+
+USE escolaetec;
+SELECT sexoaluno, COUNT(sexoaluno) FROM aluno WHERE sexoaluno = 'f' ;
+
+2) Conte a quantidade de alunos do sexo masculino usando as cláusulas COUNT e WHERE
+
+SELECT sexoaluno, COUNT(sexoaluno) FROM aluno WHERE sexoaluno = 'm' ;
+
+	
+3) Conte a quantidade de alunos do sexo masculino e feminino em um único select usando as cláusulas COUNT e group by.	
+
+SELECT sexoaluno, COUNT(sexoaluno) FROM aluno GROUP BY sexoaluno;
+
+4) Qual é a diferença entre o número de homens e mulheres? Use a cláusulas Count, Where.
+
+SELECT (SELECT  COUNT(*) FROM aluno where sexoaluno='m')- (SELECT  COUNT(*) FROM aluno where sexoaluno='f');
+
+
+
+USE escolaetec;
+SELECT sexoaluno, COUNT(sexoaluno) FROM aluno WHERE sexoaluno = 'f' ;
+SELECT sexoaluno, COUNT(sexoaluno) FROM aluno WHERE sexoaluno = 'm' ;
+SELECT sexoaluno, COUNT(sexoaluno) FROM aluno GROUP BY sexoaluno;
+SELECT (SELECT  COUNT(*) FROM aluno where sexoaluno='m')- (SELECT  COUNT(*) FROM aluno where sexoaluno='f');
+SELECT IdadeAluno, AVG(IdadeAluno) FROM aluno ;	
+SELECT nomealuno FROM aluno WHERE idadealuno = (SELECT MIN(idadealuno) FROM aluno);
+SELECT nomealuno FROM aluno WHERE idadealuno = (SELECT MAX(idadealuno) FROM aluno);
+SELECT idadealuno FROM aluno WHERE quantidade= (SELECT COUNT(IdadeAluno)FROM aluno);
+
+
+USE escolaetec;
+SELECT sexoaluno, COUNT(sexoaluno) FROM aluno WHERE sexoaluno = 'f' ;
+SELECT sexoaluno, COUNT(sexoaluno) FROM aluno WHERE sexoaluno = 'm' ;
+SELECT sexoaluno, COUNT(sexoaluno) FROM aluno GROUP BY sexoaluno;
+SELECT (SELECT  COUNT(*) FROM aluno where sexoaluno='m')- (SELECT  COUNT(*) FROM aluno where sexoaluno='f');
+SELECT IdadeAluno, AVG(IdadeAluno) FROM aluno ;	
+SELECT nomealuno FROM aluno WHERE idadealuno = (SELECT MIN(idadealuno) FROM aluno);
+SELECT nomealuno FROM aluno WHERE idadealuno = (SELECT MAX(idadealuno) FROM aluno);
+SELECT idadealuno FROM aluno WHERE quantidade= (SELECT COUNT(IdadeAluno)FROM aluno);

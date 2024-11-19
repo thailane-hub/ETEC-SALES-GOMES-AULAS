@@ -1,0 +1,72 @@
+object Form1: TForm1
+  Left = 692
+  Height = 375
+  Top = 189
+  Width = 452
+  Caption = 'Form1'
+  ClientHeight = 375
+  ClientWidth = 452
+  LCLVersion = '3.2.0.0'
+  object Edit1: TEdit
+    Left = 136
+    Height = 23
+    Top = 56
+    Width = 240
+    TabOrder = 0
+    OnChange = Edit1Change
+  end
+  object Edit2: TEdit
+    Left = 136
+    Height = 23
+    Top = 96
+    Width = 240
+    TabOrder = 1
+  end
+  object Cadastrar: TButton
+    Left = 192
+    Height = 25
+    Top = 136
+    Width = 75
+    Caption = 'Cadastrar'
+    TabOrder = 2
+    OnClick = CadastrarClick
+  end
+  object ListBox1: TListBox
+    Left = 72
+    Height = 128
+    Top = 184
+    Width = 307
+    ItemHeight = 0
+    TabOrder = 3
+  end
+  object Remover: TButton
+    Left = 192
+    Height = 25
+    Top = 328
+    Width = 75
+    Caption = 'Remover'
+    TabOrder = 4
+    OnClick = RemoverClick
+  end
+  object Label1: TLabel
+    Left = 72
+    Height = 15
+    Top = 64
+    Width = 33
+    Caption = 'Nome'
+  end
+  object Label2: TLabel
+    Left = 72
+    Height = 15
+    Top = 104
+    Width = 61
+    Caption = 'Sobrenome'
+  end
+  object Label3: TLabel
+    Left = 168
+    Height = 15
+    Top = 25
+    Width = 136
+    Caption = 'CADASTRO DE ALUNO(A)'
+  end
+end

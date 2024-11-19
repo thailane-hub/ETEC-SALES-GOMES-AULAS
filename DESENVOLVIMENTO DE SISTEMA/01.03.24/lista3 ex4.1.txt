@@ -1,0 +1,16 @@
+{4-Escreva um programa que solicite ao usuário dois números (inicio e fim) e, em seguida, imprima todos os números entre eles usando uma estrutura while e for.}
+
+Program HelloWorld(output);
+
+var inicio,fim:integer;
+
+begin
+    writeln('inicio');
+    read(inicio);
+    writeln('fim');
+    read(fim);
+    
+    for inicio:= inicio to fim do
+        write(' ',inicio);
+  
+end.

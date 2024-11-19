@@ -1,0 +1,1 @@
+usar local storage para armazenar os iput de pedidos e puxar para calculos depois com um arquivo javascript.

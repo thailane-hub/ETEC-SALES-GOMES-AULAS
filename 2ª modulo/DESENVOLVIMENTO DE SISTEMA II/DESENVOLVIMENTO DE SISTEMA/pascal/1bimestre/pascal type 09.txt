@@ -1,0 +1,109 @@
+
+aula do dia 09/04/2024
+TIPOS-TYPE
+
+
+
+Program HelloWorld(output);
+type
+    pessoa      =(pessoa1, pessoa2, pessoa3);
+    booleano    =(true, false);
+    dia         =(segunda,terca,quarta,quinta,sexta,sabado,domingo);
+    tipo_pessoa =(fisica,juridica);
+    tipo_animal =(mamifero, herbivoro,onivoro,carnivoro);
+    
+
+var 
+    animal          :tipo_animal;
+    tipo_cliente    :tipo_pessoa;
+    person          :pessoa;
+    verificar       :booleano;
+    d               :dia;
+begin
+
+    animal          :=mamifero;
+    tipo_cliente    :=juridica;
+    person          := pessoa1;
+    verificar       := true;
+    d               :=segunda;
+    
+    writeln(person);
+    writeln(verificar);
+    writeln(d);
+    writeln(tipo_cliente);
+    writeln(animal);
+    
+end.
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+Program HelloWorld(output);
+type
+    tipo_ficha = record
+        nome: string[40];
+        dia, mes, ano:integer;
+        endereco:string[255];
+    end;
+    
+var
+    cliente:tipo_ficha;
+begin
+    cliente.nome := 'Mirata Filoxina';
+    cliente.dia  :=1;
+    cliente.mes  :=2;
+    cliente.ano  :=2024;
+    cliente.endereco :='Rua quadrada';
+    
+    writeln('Nome ', cliente.nome);
+    writeln('Dia ', cliente.dia);
+    writeln('mes ', cliente.mes);
+    writeln('ano ', cliente.ano);
+end.
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+Program HelloWorld(output);
+
+type
+    tipo_pessoa = (aluno,professor);
+    pessoa = record
+        nome: string[40];
+        telefone:string[11];
+        tipo    :tipo_pessoa;
+end;
+
+var
+    alunos : array [1..2] of pessoa;
+    i      :integer;
+    
+begin
+    for i := 1 to 2 do
+    begin
+         writeln('Digite o nome ');
+         readln(alunos[i].nome);
+         writeln('Digite o telefone ');
+         readln(alunos[i].telefone);
+      
+    end;
+    
+    for i:= 1 to 2 do
+    begin
+        writeln('nome do',alunos[i].tipo, ': ', alunos[i].nome);
+        writeln('telefone do',alunos[i].tipo, ': ', alunos[i].telefone);
+        { writeln('Nome do aluno ',i,': ',alunos[i].nome);
+         writeln('telefone do aluno ',i,': ',alunos[i].telefone);
+         writeln('Digite o tipo da pessoa');
+         readln(alunos[i].tipo);}
+    end;
+        
+  
+end.
+
+
+
+
+
+

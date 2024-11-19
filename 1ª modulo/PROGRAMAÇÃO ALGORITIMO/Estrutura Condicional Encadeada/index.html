@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MULTA</title>
+</head>
+<body>
+    <script>
+        var espaço, tempo, vm;
+        espaço = parseFloat(prompt("Digite o espaço em KM"));
+        tempo = parseFloat(prompt("Digite o tempo em Horas"));
+        vm = espaço/tempo;
+        alert("Velocidade média: " + vm + " KM/H")
+        if(vm>120){
+            alert("aplicar nota");
+        }
+    </script>
+</body>
+</html>

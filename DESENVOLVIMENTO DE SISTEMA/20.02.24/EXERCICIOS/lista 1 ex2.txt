@@ -1,0 +1,37 @@
+{(2 - Crie um programa que irá receber um número de 1 a 7, e exiba o dia da semana que pertence. Se escolher 1, exibir “o dia escolhido é domingo”, etc.)}
+
+Program DiadaSemana(output);
+var numero:integer;
+begin
+write('informe um numero ');
+read(numero);
+    if numero=1 then
+    begin
+    write('o dia escolhido é domingo');
+    end;
+    if numero=2 then
+    begin
+    write('o dia escolhido é segunda');
+    end;
+    if numero=3 then
+    begin
+    write('o dia escolhido é terça');
+    end;
+    if numero=4 then
+    begin
+    write('o dia escolhido é quarta');
+    end;
+    if numero=5 then
+    begin
+    write('o dia escolhido é quinta');
+    end;
+    if numero=6 then
+    begin
+    write('o dia escolhido é sexta');
+    end;
+    if numero=7 then
+    begin
+    write('o dia escolhido é sabado');
+    end;
+
+end.

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var v1,v2,v3,v4,r;
+        v1=parseFloat(prompt("valor 1"));
+        v2=parseFloat(prompt("valor 2"));
+        v3=parseFloat(prompt("valor 3"));
+        v4=parseFloat(prompt("valor 4"));
+        if(v1>=v2&&v1>=v3&&v1>=v4){
+            if(v2>=v3&&v2>=v4){
+                r=v1+v2;
+            }
+            else{
+                if(v3>=v4){
+                    r=v1+v3;
+                }
+                else{
+                    r=v1+v4
+                }
+            }
+
+        }
+        else{
+            if(v2>=v3&&v2>=v4){
+            if(v3>=v4){
+                r=v2+v3;
+            }
+            else{
+                r=v2+v4;
+            }
+        }
+        else{
+            r=v3+v4;
+        }       
+        }
+        alert("a soma dos dois maiores numeros é "+r.toFixed(2))
+    </script>
+</head>
+<body>
+</body>
+</html>

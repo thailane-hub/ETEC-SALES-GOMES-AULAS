@@ -1,0 +1,21 @@
+{Desenvolva um programa que solicite ao usuário um número e, em seguida, imprima a soma de todos os números de 1 até o número informado usando uma estrutura for.
+}
+
+Program HelloWorld(output);
+
+var i,f,s:integer;
+begin
+  write('informe o numero do fim: ');
+  read(f);
+  
+  i:=0;
+  
+  for i:=0 to f-1 do
+  
+    begin
+        f:=1+i;
+        s:=s+f;
+    end;
+        write(' ',s);
+  
+end.

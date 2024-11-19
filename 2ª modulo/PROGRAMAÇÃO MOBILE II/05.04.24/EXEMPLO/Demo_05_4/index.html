@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        CPF: <input type="text" maxlength="11" minlength="5" autocomplete="off" placeholder="Digite o seu CPF" required>
+        <br/>
+        Email: <input type="email" value="0" placeholder="Digite o seu email" required>
+        <br/>
+        Qtd Filhos: <input type="number" min="0" max="3" value="0" placeholder="Digite a quantidade de filhos" required>
+        <br/>
+        Data de nascimento: <input type="date" id="data" placeholder="Escolha a data" required>
+        <br/>
+        <input type="checkbox" required> Li e aceito os termos
+        <button>Enviar</button>
+    </form>
+</body>
+<script>
+
+    function formatarData(){
+        let dataNaoFormatada = new Date().toLocaleDateString();
+        let partes = dataNaoFormatada.split("/");
+        return `${partes[2]}-${partes[1]}-${partes[0]}`;
+    }
+
+    const campoData = document.getElementById("data");
+    campoData.value = formatarData();
+</script>
+</html>

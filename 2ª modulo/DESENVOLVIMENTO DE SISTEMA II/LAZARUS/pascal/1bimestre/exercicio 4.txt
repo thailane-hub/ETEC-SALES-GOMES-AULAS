@@ -1,0 +1,59 @@
+
+
+Declare um array de 10 números inteiros. Preencha-o com valores e, em seguida, exiba a soma de todos os elementos.
+
+
+program soma;
+var num: array[1..10] of integer;
+i:integer;
+s: integer;
+
+begin
+num[1]:=1;
+num[2]:=1;
+num[3]:=1;
+num[4]:=1;
+num[5]:=1;
+num[6]:=1;
+num[7]:=1;
+num[8]:=1;
+num[9]:=1;
+num[10]:=1;
+
+for i := 1 to 10 do
+begin
+s:=num[i]+s;
+end;
+write(s);
+end.
+
+
+
+program soma2;
+var 
+    n: array[1..10] of integer;
+    i, soma, inicio, fim: integer;
+begin
+
+    inicio := 1;
+    fim := 10;
+    soma := 0;
+
+    for i := inicio to fim do
+    begin
+        writeln('Digite o valor ', i);
+        readln(n[i]);
+    end;
+    
+    for i := inicio to fim do
+    begin
+        soma := n[i] + soma;
+    end;
+    
+    writeln(soma);
+end.
+
+
+
+Declare um array de 5 números reais. Preencha-o com os valores, e em seguida, exiba a média dos valores.
+

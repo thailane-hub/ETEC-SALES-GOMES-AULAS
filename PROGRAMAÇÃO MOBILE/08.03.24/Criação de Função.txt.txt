@@ -1,0 +1,15 @@
+const botao1 = document.getElementById("btn1");
+
+botao1.addEventListener("click", function(){
+    alert("oi");
+});
+
+botao1.addEventListener("click", ()=>{
+    alert()
+});
+
+botao1.addEventListener("click", x);
+
+function x(){
+
+}

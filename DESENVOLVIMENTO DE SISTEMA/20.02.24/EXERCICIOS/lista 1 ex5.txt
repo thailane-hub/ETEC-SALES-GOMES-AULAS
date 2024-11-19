@@ -1,0 +1,12 @@
+{5 - Crie um programa que irá calcular a área de um quadrado.}
+
+Program AreaDoQuadrado(output);
+var l1,a:integer;
+begin
+  writeln('Informe um lado do quadrado');
+  read(l1);
+  
+  a:=l1*l1;
+  
+  write('a area do quadrado é: ',a);
+end.

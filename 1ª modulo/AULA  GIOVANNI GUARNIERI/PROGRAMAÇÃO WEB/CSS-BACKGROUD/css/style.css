@@ -1,0 +1,12 @@
+h2{
+    color: blue;
+}
+/* body{
+    background-image: url("../img/leao.jfif");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+} */
+body{
+    background: rgb(9, 183, 189) url("../img/fadas.jfif") no-repeat fixed center center;
+
+}

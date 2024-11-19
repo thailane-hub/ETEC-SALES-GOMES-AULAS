@@ -1,0 +1,41 @@
+{# Exercício 2.9
+
+Faça um programa que irá receber dois valores reais, e um operador (+, -. *, /).
+
+Será realizado o cálculo conforme o operador digitado. Se escolher +, será feito a soma e exibido o resultado da soma, se digitar - será exibido a subtração e assim por diante.}
+
+Program HelloWorld(output);
+
+var n1,n2,r: real;
+    p:string;
+
+begin
+
+    write('Digite o primeiro numero: ');
+    read(n1);
+    readln;
+    
+    write('Digite o operador: ');
+    read(p);
+    readln;
+    
+    write('Digite o segundo numero: ');
+    read(n2);
+    
+    
+    case p of
+        
+        '+': r:=n1+n2;
+        '*': r:=n1*n2;
+        '-': r:=n1-n2;
+        '/': r:=n1/n2;
+        
+        
+        else
+            write('Opçao invalida ');
+            
+        end;
+    
+            write('O resultado é: ',r:0:2);
+
+end.

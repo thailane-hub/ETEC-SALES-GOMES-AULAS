@@ -1,0 +1,81 @@
+object Form1: TForm1
+  Left = 714
+  Height = 240
+  Top = 173
+  Width = 320
+  Caption = 'desbloquear Edit'
+  ClientHeight = 240
+  ClientWidth = 320
+  OnCreate = FormCreate
+  LCLVersion = '3.2.0.0'
+  object Button1: TButton
+    Left = 96
+    Height = 25
+    Top = 104
+    Width = 75
+    Caption = 'somar'
+    TabOrder = 0
+    OnClick = Button1Click
+  end
+  object Edit1: TEdit
+    Left = 40
+    Height = 23
+    Top = 56
+    Width = 80
+    TabOrder = 1
+    Text = 'Edit1'
+    OnChange = Edit1Change
+  end
+  object Label1: TLabel
+    Left = 64
+    Height = 15
+    Top = 8
+    Width = 151
+    Caption = 'Digite a mensagem desejada'
+    OnClick = Label1Click
+  end
+  object Button2: TButton
+    Left = 32
+    Height = 25
+    Top = 152
+    Width = 91
+    Caption = 'Bloquear Edit'
+    TabOrder = 2
+    OnClick = Button2Click
+  end
+  object Button3: TButton
+    Left = 149
+    Height = 25
+    Top = 152
+    Width = 131
+    Caption = 'Desbloquear Edit'
+    TabOrder = 3
+    OnClick = Button3Click
+  end
+  object Edit2: TEdit
+    Left = 160
+    Height = 23
+    Top = 56
+    Width = 80
+    TabOrder = 4
+    Text = 'Edit2'
+    OnChange = Edit2Change
+  end
+  object Button4: TButton
+    Left = 192
+    Height = 1
+    Top = 113
+    Width = 57
+    Caption = 'Button4'
+    TabOrder = 5
+  end
+  object Button5: TButton
+    Left = 205
+    Height = 25
+    Top = 104
+    Width = 75
+    Caption = 'abrir janela'
+    TabOrder = 6
+    OnClick = Button5Click
+  end
+end

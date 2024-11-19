@@ -1,0 +1,5 @@
+insert into vaga (idvaga, descricao, prazoinicial, prazofinal, idsetor, idadmin) values (1, 'Dut eros. Suspendisse accumsan tortor quis. Sed ante.', '2017-10-10 17:59:45', '2018-09-20 00:57:02', 1, 5);
+insert into vaga (idvaga, descricao, prazoinicial, prazofinal, idsetor, idadmin) values (2, 'Duis bibendum, felis sed a justo. Aliquam quis turpi.', '2017-04-21 12:54:10', '2018-12-23 10:34:39', 2, 1);
+insert into vaga (idvaga, descricao, prazoinicial, prazofinal, idsetor, idadmin) values (3, 'Cum sociis natoque penat ma In blandit ultrices enim.', '2017-06-28 19:19:23', '2018-01-20 10:53:20', 3, 4);
+insert into vaga (idvaga, descricao, prazoinicial, prazofinal, idsetor, idadmin) values (4, 'In hac habitasse platea dictumst. Morbi vestibulum,is', '2017-07-02 09:49:20', '2018-01-01 05:35:12', 4, 2);
+insert into vaga (idvaga, descricao, prazoinicial, prazofinal, idsetor, idadmin) values (5, 'Nulla tellus. In sagittis dui vel nisl. Duis ac nibh.', '2017-02-06 16:57:10', '2018-10-15 16:46:24', 5, 3);

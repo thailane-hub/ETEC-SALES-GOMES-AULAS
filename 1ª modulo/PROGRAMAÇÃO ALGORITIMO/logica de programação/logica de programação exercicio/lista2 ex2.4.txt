@@ -1,0 +1,26 @@
+{# Exercício 2.4
+
+Elabore um programa que pergunte a idade do usuário, e exiba na tela se ele pode votar ou não.
+}
+Program HelloWorld(output);
+
+var a:integer;
+    
+
+begin
+    write('Informe sua idade: ');
+    read(a);
+    
+
+    
+    if a < 16 then
+        begin
+            write('Nâo pode votar');
+        end
+        
+    else
+        begin
+            write('Pode votar');
+        end;
+        
+end.

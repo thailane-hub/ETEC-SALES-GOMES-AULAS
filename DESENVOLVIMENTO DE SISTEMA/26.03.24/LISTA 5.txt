@@ -1,0 +1,530 @@
+{5.1  - Escreva um procedimento em Pascal que receba dois números como parâmetros e exiba a soma desses números.}
+
+Program HelloWorld(output);
+
+
+    procedure calculoExibir(n1,n2:real);
+    var resultado: real;
+    
+    begin
+        resultado:= n1+n2;
+        write('A soma dos numeros é: ',resultado:0:2);
+    end;
+    
+var numero1,numero2: real;
+
+begin
+    
+    writeln('Sistema de soma');
+    writeln('----------------------------');
+    
+    write('informe o primeiro numero: ');
+    readln(numero1);
+    write('informe o segundo numero: ');
+    readln(numero2);
+    writeln('----------------------------');
+    
+    calculoExibir(numero1,numero2);
+end.
+
+----------------------------------------------------------------------------------------------------------------------------
+
+{5.2 - Crie um procedimento que receba um número inteiro como parâmetro e exiba se esse número é par ou ímpar.}
+
+Program HelloWorld(output);
+
+var numero: integer;
+
+procedure decisao(n:integer);
+var resultado: integer;
+begin
+     resultado:=n mod 2;
+   
+     if resultado = 0 then
+     begin
+        write('Este numero é par');
+     end
+     
+     else
+     begin
+        write('Este numero é impar');
+     end;
+     
+end;
+
+begin
+
+    writeln('Descubra se o numero é par ou impar');
+    writeln('------------------------------');
+    write('Digite um numero: ');
+    readln(numero);
+    writeln('------------------------------');
+    
+    decisao(numero);
+    
+end.
+----------------------------------------------------------------------------------------------------------------------------------
+
+{5.3 - Implemente um procedimento que receba a base e a altura de um triângulo como parâmetros e exiba sua área. Aplique passagem de parâmetros para a procedure de cálculo.}
+
+Program HelloWorld(output);
+
+var base,altura: real;
+
+procedure calculo(a,b:real);
+var resultado:real;
+begin
+    resultado:=b*a/2;
+    write('A área do triâgulo é: ',resultado:0:2);
+end;
+
+
+begin
+  writeln('Calcule a área do triâgulo ');
+  writeln('---------------------------- ');
+  
+  write('Digite a base: ');
+  readln(base);
+  write('Digite a altura: ');
+  readln(altura);
+  writeln('---------------------------- ');
+  
+  calculo(base,altura);
+
+end.
+
+--------------------------------------------------------------------------------------------------------------------------------
+
+{5.4 - Escreva um procedimento que receba um número inteiro como parâmetro e exiba sua tabuada.}
+
+Program HelloWorld(output);
+
+var numero: integer;
+
+procedure tabuada(n:integer);
+
+var inicio,fim,i,resultado: integer;
+begin
+    inicio:=1;
+    fim:=10;
+
+    for i:= inicio to fim do
+    begin
+        resultado:= n*i;
+        writeln(n,' x ',i,'= ',resultado);
+    end;
+end;
+
+begin
+  writeln('Sistema para ver tabuada');
+  writeln('-------------------------');
+  write('Digite um numero: ');
+  readln(numero);
+  writeln('-------------------------');
+  tabuada(numero);
+  
+end.
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+{5.5 - Crie um procedimento que receba a base e a altura de um retângulo como parâmetros e exiba sua área.}
+
+
+Program HelloWorld(output);
+
+var base,altura: real;
+
+procedure processamento(a,b:real);
+var resultado: real;
+begin
+    resultado:= a*b;
+    writeln('A área do retângulo: ',resultado:0:2);
+end;
+
+begin
+  writeln('Descubra a área do triângulo');
+  writeln('-------------------------------');
+  write('Digite a base: ');
+  readln(base);
+  write('Digite a altura: ');
+  readln(altura);
+  writeln('-------------------------------');
+
+  processamento(base,altura);
+  
+end.
+
+--------------------------------------------------------------------------------------------------------------------------------------
+
+{5.6 - Escreva um procedimento que receba um número inteiro como parâmetro e exiba se ele é positivo, negativo ou zero.}
+Program HelloWorld(output);
+
+var numero:integer;
+
+procedure processamento (n:integer);
+begin
+    if n < 0 then
+    begin
+        write('Numero negativo');
+    end;
+    if n = 0 then
+    begin
+        write('Igual a zero');
+    end;
+    if n > 0 then
+    begin
+        write('Numero positivo');
+    end;
+end;
+
+begin
+  writeln(' Descubra se positivo, negativo ou zero');
+  writeln('-----------------------');
+  write('Digite um numero inteiro: ');
+  readln(numero);
+  writeln('-----------------------');
+  
+  processamento(numero);
+
+end.
+
+--------------------------------------------------------------------------------------------------------------------------------------
+
+{5.7 - Crie um procedimento que irá receber os dados de 4 alunos como: nome, sobrenome, telefone, email, e exiba todas informações logo em seguida. Utilize passagem de parâmetros.}
+
+Program HelloWorld(output);
+
+var aluno: array[1..4] of record
+        nome: string[30];
+        sobrenome: string[30];
+        telefone: string[9];
+        email: string[50];
+    end;
+
+ i,inicio,fim: integer;
+
+procedure ColetaDados;
+
+begin
+    inicio:=1;
+    fim:=4;
+    
+    for i:= inicio to fim do
+    begin
+        writeln('----------------------');
+        writeln('INFORME OS DADOS DO ' ,i, 'º ALUNO');
+        write('Informe o nome: ');
+        readln(aluno[i].nome);
+        write('Informe o sobrenome: ');
+        readln(aluno[i].sobrenome);
+        write('Informe o telefone: ');
+        readln(aluno[i].telefone);
+        write('Informe o email: ');
+        readln(aluno[i].email);
+    end;
+end;
+
+procedure exibir(n,s,t,e:string);
+
+begin
+        writeln('----------------------');
+        writeln('DADOS DO ' ,i, 'º ALUNO');
+        writeln('NOME: ',n);
+        writeln('SOBRENOME: ',s);
+        writeln('TELEFONE: ',t);
+        writeln('E-MAIL: ',e);
+end;
+
+begin
+    inicio:=1;
+    fim:=4;
+    
+    writeln('CADASTRO DE ALUNO');
+    writeln('------------------');
+
+    ColetaDados;
+    
+    for i:= inicio to fim do
+    begin
+        exibir(aluno[i].nome,aluno[i].sobrenome,aluno[i].telefone,aluno[i].email);
+    end;
+end.
+--------------------------------------------------------------------------------------------------------------------------------------
+
+{5.8 - Crie um programa que irá cadastrar 3 veículo: modelo, ano de fabricação, cor, tipo combustível, cilindradas. O usuário poderá exibir a lista com todos os veículos ou escolher exibir somente um dos veículos da lista.}
+
+Program HelloWorld(output);
+
+var veiculo: array[1..3] of record
+    modelo: string[20];
+    ano: string[4];
+    cor: string[20];
+    combustivel:string[20];
+    cilindrada: string[20]
+end;
+
+i,inicio,fim:integer;
+
+procedure cadastro;
+begin
+
+inicio:=1;
+fim:=3;
+
+    for i:= inicio to fim do
+    begin
+        writeln('-----------------------');
+        writeln('INFORME OS DADOS DO ',i,'º Veiculo');
+        write('Qual o modelo: ');
+        readln(veiculo[i].modelo);
+        write('Qual o ano de fabriação: ');
+        readln(veiculo[i].ano);
+        write('Qual a cor: ');
+        readln(veiculo[i].cor);
+        write('Qual o combustivel: ');
+        readln(veiculo[i].combustivel);
+        write('Qual a cilindrada: ');
+        readln(veiculo[i].cilindrada);
+    end;
+end;
+
+procedure escolha();
+var x:integer;
+begin
+    inicio:=1;
+    fim:=3;
+    
+        writeln('***********************');
+        write('Qual Veiculo deseja visualizar opção: 1 , 2 , 3 ou todos(0) ? ');
+        readln(x);
+    
+    if x = 1 then
+    begin
+        writeln('***********************');
+        writeln('DADOS DO 1º VEICULO');
+        writeln('***********************');
+        writeln('Modelo: ',veiculo[1].modelo);
+        writeln('Ano: ',veiculo[1].ano);
+        writeln('Cor: ',veiculo[1].cor);
+        writeln('Combustivel: ',veiculo[1].combustivel);
+        writeln('Cilindrada: ',veiculo[1].cilindrada);
+    end;
+    
+    if x = 2 then
+    begin
+        writeln('***********************');
+        writeln('DADOS DO 2º VEICULO');
+        writeln('***********************');
+        writeln('Modelo: ',veiculo[2].modelo);
+        writeln('Ano: ',veiculo[2].ano);
+        writeln('Cor: ',veiculo[2].cor);
+        writeln('Combustivel: ',veiculo[2].combustivel);
+        writeln('Cilindrada: ',veiculo[2].cilindrada);
+    end;
+    
+    if x = 3 then
+    begin
+        writeln('***********************');
+        writeln('DADOS DO 3 º VEICULO');
+        writeln('***********************');
+        writeln('Modelo: ',veiculo[3].modelo);
+        writeln('Ano: ',veiculo[3].ano);
+        writeln('Cor: ',veiculo[3].cor);
+        writeln('Combustivel: ',veiculo[3].combustivel);
+        writeln('Cilindrada: ',veiculo[3].cilindrada);
+    end;
+    
+    if x = 0  then
+    begin
+        for i:= inicio to fim do
+        begin
+            writeln('***********************');
+            writeln('DADOS DO ',i,'º VEICULO');
+            writeln('***********************');
+            writeln('Modelo: ',veiculo[i].modelo);
+            writeln('Ano: ',veiculo[i].ano);
+            writeln('Cor: ',veiculo[i].cor);
+            writeln('Combustivel: ',veiculo[i].combustivel);
+            writeln('Cilindrada: ',veiculo[i].cilindrada);
+        end;
+    end;
+
+end;
+
+begin
+        writeln('CADASTRO DE VEICULOS');
+    
+    {chamando as procedure}    
+        cadastro;
+        escolha;
+end.
+--------------------------------------------------------------------------------------------------------------------------------------
+
+{5.9 - Crie um programa que irá pedir para o usuário escolher uma das opções abaixo:
+
+- Calcular área do quadrado
+- Calcular área do retângulo
+- Calcular área do triângulo retângulo
+- Calcular área do círculo
+- Calcular volume do cubo
+- Converter real em dólar
+- Converter dólar em real
+- Converter centímetros em metros
+- Converter metros em centímetros
+
+O programa deverá realizar os cálculos e exibir os resultados de forma organizada.}
+
+Program HelloWorld(output);
+
+var resultado,base,altura,lado,raio,aresta,numero: real;
+    opcao:integer;
+
+procedure AreaQuadrado;
+begin
+    writeln;
+    write('INFORME O LADO DO QUADRADO: ');
+    read(lado);
+    resultado:= lado*lado;
+    writeln('RESPOSTA: ',resultado:0:2);
+end;
+
+procedure AreaRetangulo;
+begin
+    write('INFORME A BASE DO RETANGULO: ');
+    readln(base);
+    write('INFORME A ALTURA DO RETANGULO: ');
+    readln(altura);
+    resultado:= base*altura;
+    writeln('RESPOSTA: ',resultado:0:2);
+end;
+
+procedure AreaTriangulo;
+begin    
+    write('INFORME A BASE DO TRIANGULO: ');
+    readln(base);
+    write('INFORME A ALTURA DO TRIANGULO: ');
+    readln(altura);
+    resultado:= (base*altura)/2;
+    writeln('RESPOSTA: ',resultado:0:2);
+end;
+
+procedure AreaCirculo;
+begin
+    write('INFORME O RAIO DO CIRCULO: ');
+    readln(raio);
+    resultado:= 3.1416*(raio*raio);
+    writeln('RESPOSTA: ',resultado:0:2);
+end;
+
+procedure VolumeCubo;
+begin
+    write('INFORME A ARESTA DO CUBO: ');
+    readln(aresta);
+    resultado:= aresta*aresta*aresta;
+    writeln('RESPOSTA: ',resultado:0:2);
+end;
+
+procedure Dolar;
+begin
+    write('INFORME O VALOR EM REAIS PARA SER CONVERTIDO EM DOLARES: ');
+    readln(numero);
+    resultado:=numero /5;
+    writeln('RESPOSTA: ',resultado:0:2,' dolares');
+end;
+
+procedure real;
+begin
+    write('INFORME O VALOR EM DOLARES PARA SER CONVERTIDO EM REAIS: ');
+    readln(numero);
+    resultado:=numero*5;
+    writeln('RESPOSTA: ',resultado:0:2,' reais');
+end;
+
+procedure centimetrosParaMetro;
+begin
+    write('INFORME O VALOR EM CENTIMETROS PARA SER CONVERTIDO EM METROS: ');
+    readln(numero);
+    resultado:=numero/100;
+    writeln('RESPOSTA: ',resultado:0:2,' metros');
+end;
+
+procedure MetrosParaCentimetro;
+begin
+    write('INFORME O VALOR EM METROS PARA SER CONVERTIDO EM CENTIMETROS: ');
+    readln(numero);
+    resultado:=numero*100;
+    writeln('RESPOSTA: ',resultado:0:2,' centimetros');
+end;
+
+begin
+  writeln('CÁLCULO DE ÁREA E CONVERSOR DE MOEDAS E MEDIDAS');
+  writeln('-----------------------------------------------');
+  writeln;
+  writeln('ESCOLHA UMA OPÇÃO ABAIXO');
+  writeln;
+  writeln('1 - Calcular área do quadrado');
+  writeln('2 - Calcular área do retângulo');
+  writeln('3 - Calcular área do triângulo retângulo');
+  writeln('4 - Calcular área do círculo');
+  writeln('5 - Calcular volume do cubo');
+  writeln('6 - Converter real em dólar');
+  writeln('7 - Converter dólar em real');
+  writeln('8 - Converter centímetros em metros');
+  writeln('9 - Converter metros em centímetros');
+  writeln;
+  write('OPÇÃO DESEJADA: ');
+  readln(opcao);
+
+  writeln('-----------------------------------------------');
+  
+  
+  case opcao of
+  1: AreaQuadrado;
+  2: AreaRetangulo;
+  3: AreaTriangulo;
+  4: AreaCirculo;
+  5: VolumeCubo;
+  6: Dolar;
+  7: real;
+  8: centimetrosParaMetro;
+  9: MetrosParaCentimetro;
+  end;
+  
+end.
+--------------------------------------------------------------------------------------------------------------------------------------
+program BubbleSort;
+var
+    valores: array[1..5] of integer;
+    i,j,temp,inicio,fim: integer;
+    
+begin
+    valores[1] := 5;
+    valores[2] := 3;
+    valores[3] := 8;
+    valores[4] := 4;
+    valores[5] := 6;
+    
+    
+    inicio:= 1;
+    fim:= 5;
+    
+    
+    for i:= 1 to fim do
+    begin
+        for j:= i+1 to fim do
+        begin
+            if valores[i] > valores[j] then
+            begin
+                temp:= valores[i];
+                valores[i]:= valores[j];
+                valores[j]:= temp;
+            end;
+        end;
+    end;
+
+    for i:= inicio to fim do
+    begin
+        write(valores[i]);
+    end;
+    
+end.

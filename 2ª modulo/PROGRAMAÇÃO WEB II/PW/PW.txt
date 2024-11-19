@@ -1,0 +1,191 @@
+AULA DO DIA 8/5
+
+
+-- https://tinyurl.com/08-05-etecsg
+CREATE DATABASE ecommerce;
+USE ecommerce;
+CREATE TABLE categoria(
+    idcategoria INT PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(30),
+    descricao VARCHAR(200)
+)Engine=InnoDB;
+
+CREATE TABLE marca(
+    idmarca INT PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(30),
+    logo VARCHAR(200)
+)Engine=InnoDB;
+
+CREATE TABLE produto(
+    idproduto INT PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(30),
+    preco DECIMAL(10,2),
+    fkcategoria INT,
+    FOREIGN KEY(fkcategoria) REFERENCES categoria(idcategoria),
+    fkmarca INT,
+    FOREIGN KEY(fkmarca) REFERENCES marca(idmarca)
+)Engine=InnoDB
+
+NO BANCO DE DADOS SÓ SALVA O NOME DO ARQUIVO AS IMAGEM FICAM SALVA EM UMA PASTA POR ISSO SE ULTILIZA VARCHAR NAS IMAGENS
+
+
+
+include_once serve para importar os arquivos no php ex:
+
+<?php
+include_once "./header.php";
+?>
+
+
+<main>
+
+</main>
+
+<?php
+include_once "./footer.php";
+?>
+
+
+
+https://codepen.io/ programa palo navegador
+
+https://tinyurl.com/app editar link
+
+https://tinyurl.com/etecsg-8-5
+
+https://codepen.io/Giovanni-F-Guarnieri/pen/wvbvvXr
+
+https://getbootstrap.com/
+bootstrap já tem classe pra isso só adicionar na tag desejada
+
+os dados devem ser enviados por post no form e não por get estudar mais sobre
+test area campo que permite multiplas linhas
+
+aula do dia 15/05
+
+fazer cadastro de bancos de dados via formulario
+criou uma pasta modulo categoria
+
+formas de conectar são o msql_connect() mas esta obsoleto sem atualização de segurança não usa mais hoje é considerado não seguro, 
+msqli e o pdomsql são as duas formas ultilizada hoje em dia
+PDO ele alem de permitir uma conexão de bancos de dados em php tambem permite conexão com outros bancos de dados
+qual é a perfomatico uma sqli ou pdo, sqli é mais rapido e parametros nomeados
+MSQLI permite acesso, conecta com banco de dados msql e não com outros banco de dados, ex: sqlserver
+
+porta com padrao 3306
+CEPANEL ESTUDAR 
+IFINITY FREE HOSPEDAGEM GRATUITA COM ANUNCIO
+000WEBHOST FREE E SEM ANUNCIO
+HOSTGATOR PROFESSOR ULTIZA, DIZENDO ELE QUE É MUITO BOM.
+
+NEW (ESTOU CRIANDO UMA NOVA CONEXÃO COM BANCO DE DADOS) PDO 
+class é uma representação abstrata de alguma coisa no mundo real
+public modificador de acesso
+varias funções que o aluna pode execultar na cena
+
+-> (estou acessado essa propriedade do objeto) consegue acessa e modificar o objeto 
+o comando new cria uma estancia 
+a variavel veem de um comando new se trona uma referencia do objeto que foi estanciado
+this esta se referindo a tudo que pertence a classe
+
+PHP Intelephense ele faz o rastreio e mostra o erro
+diferenca de apostolo e aspas ver
+
+// include_once -> Se o arquivo não existir, o código seguirá normalmente WARNING
+
+// require_once -> (exige que o arquivo existe) Se o arquivo não existir, a execução é cancelada e é gerado FATAL ERROR
+
+USAR O APOSTOLO PARA DIFERENCIAR
+SQL INJECTION
+
+NÃO COLOCAR VARIAVEL 
+   $sql = "INSERT INTO categoria VALUES(0, '$nome', '$descricao')"; não ultilizar esse metodo torna o site a vulnerabilidade 
+;"",DROP DATA BASE APAGA TODOS OS DADOS
+pen teste escaneia e verifica falha
+sql map
+
+forma correta de fazer
+
+    $sql = "INSERT INTO categoria VALUES(0, :nome, :descricao)";
+
+pwned
+
+quando usar o bindpara ele usa como valor e não um codigo na sql e blinda o sql
+parameto no msqli ultiliza ,?,?) 
+no PDO se coloca nome nos parametros ex :nome
+
+
+
+aula 22/05
+
+vamos fazer o crud
+Create (insert)
+Read(select)
+Update
+Delete
+
+vamos fazer um tratamento para o cadastro usando o alert
+atentar ao form  <form action="/modulos/categoria/cadastrar.php" method="POST"> vai levar a raiz do projeto que é a pasta aula cudado ao usar barra vai levar para a raiz do projeto
+
+    <form action="./modulos/categoria/cadastrar.php" method="POST"> o metodo correto com ponto barra
+
+
+
+nome do campo de texto tem que ser exatamente igual ao o do post
+
+  ex $nome = $_POST["nome"]; esta diferente do campo name não irá funcionar, o certo seria $nome = $_POST["name"]
+
+    <input type="text" name="idcategoria" id="idcategoria" class="form-control" placeholder="*NOVO*" readonly> 
+
+
+ se ele não encontrar post nome e post descrição  ele vai voltar e dar erro, cairá neste if
+
+    if(!isset($_POST["nome"], $_POST["descricao"])){
+        header("Location: ../../categoria.php?erro=1");
+    }
+
+isset ele ver se não existe
+
+  require_once "./../../database/connection.php"; importação do banco de dados
+ ele importa o arquivo
+
+se der erro de conexao no banco de dados ira aparecer erro 
+
+try{}
+cath{} estudar
+loggy ferramenta voce consegue atravez de um site consultar e aujudar equipe com notificação estudar
+
+ duas formas de parametros
+
+  <?php if(isset($_GET["sucesso"])) { ?>
+        <div class="alert alert-success" role="alert">
+            Cadastro realizado com sucesso!
+        </div>
+    <?php } ?>
+ 
+trim apara as pontas ele tirar todo os espaço do começo e do final que o usuario deixar vazio
+
+    //strlen -> conta quantos caracteres tem a string
+
+  //trim remove o espaço do começo e do final da string
+
+    <?php if(isset($_GET["sucesso"])): ?>
+        <div class="alert alert-success" role="alert">
+            Cadastro realizado com sucesso!
+        </div>
+    <?php endif; ?>
+
+
+
+
+29/05
+
+
+JS(MOSTRAR CONFIRMAÇÃO(ID))
+ELEMENTO.INNERHTM(VALOR)
+
+setAttribute CONSEGUE ALTERAR QUALQUER ATRIBUTO DE QUALQUER TAG NO JAVASCRIPT.
+IR NO BANCO DE DADOS OLHAR QUAIS CAMPO TEM A TABELA MARCA
+
+insert int value(:logo,now())" ;
+

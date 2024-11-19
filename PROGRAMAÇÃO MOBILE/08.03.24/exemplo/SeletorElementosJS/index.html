@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acessando elementos HTML via JS</title>
+</head>
+<body>
+    
+    <button id="btn-apresentacao">
+        Apresentação
+    </button>
+
+    <button class="btn-despedida">
+        Despedida
+    </button>
+
+    
+    <h1 id="titulo"></h1>
+
+</body>
+<script>
+
+    function apresentar(){
+        titulo.innerHTML = "Seja bem vindo, Giovanni!";
+        btnApresentacao.innerHTML = "Clicado";
+    }    
+
+    function despedida(){
+        titulo.innerHTML = "Até mais, Giovanni!";
+    }
+
+    document.getElementsByTagName("button");
+
+    const btnApresentacao = document.getElementById("btn-apresentacao");
+    const btnDespedida = document.getElementsByClassName("btn-despedida")[0];
+    // const btnDespedida = document.querySelector(".btn-despedida");
+    // const btnDespedida = document.querySelectorAll(".btn-despedida")[0];
+    const titulo = document.getElementById("titulo");
+    // Alterando estilo via JS (não recomendado)
+    btnApresentacao.style.backgroundColor = "yellow";
+    btnApresentacao.style.color = "green";
+
+    btnApresentacao.addEventListener("click", apresentar);    
+
+    btnDespedida.addEventListener("click", despedida);
+
+</script>
+</html>

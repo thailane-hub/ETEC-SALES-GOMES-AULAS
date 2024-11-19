@@ -1,0 +1,57 @@
+object Form1: TForm1
+  Left = 829
+  Height = 477
+  Top = 252
+  Width = 298
+  Caption = 'Form1'
+  ClientHeight = 477
+  ClientWidth = 298
+  DesignTimePPI = 120
+  LCLVersion = '3.2.0.0'
+  object Edit1: TEdit
+    Left = 176
+    Height = 28
+    Top = 88
+    Width = 100
+    TabOrder = 0
+    OnChange = Edit1Change
+  end
+  object Label1: TLabel
+    Left = 8
+    Height = 20
+    Top = 96
+    Width = 145
+    Caption = 'INSIRA O 1º NUMERO'
+  end
+  object Label2: TLabel
+    Left = 8
+    Height = 20
+    Top = 152
+    Width = 145
+    Caption = 'INSIRA O 2º NUMERO'
+  end
+  object Edit2: TEdit
+    Left = 176
+    Height = 28
+    Top = 144
+    Width = 100
+    TabOrder = 1
+    OnChange = Edit2Change
+  end
+  object Label3: TLabel
+    Left = 64
+    Height = 20
+    Top = 32
+    Width = 148
+    Caption = 'CALCULADORA SOMA'
+  end
+  object Button1: TButton
+    Left = 104
+    Height = 31
+    Top = 208
+    Width = 94
+    Caption = 'CALCULAR'
+    TabOrder = 2
+    OnClick = Button1Click
+  end
+end

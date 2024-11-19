@@ -1,0 +1,20 @@
+<script>
+	var n1, n2, m;
+	n1 = parseFloat(prompt("Informe a 1ª nota:"));
+	n2 = parseFloat(prompt("Informe a 2ª nota:"));
+	m = (n1+n2) / 2;
+	alert("Sua média é : " + m.toFixed(1));
+	if (m < 3)
+	{
+		alert("Voce está reprovado !!");
+	}
+	else
+		if (m < 7)
+		{
+			alert("Você está de recuperação !!");
+		}
+		else
+		{
+			alert("Você está aprovado !!");
+		}
+</script>

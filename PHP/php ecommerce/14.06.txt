@@ -1,0 +1,42 @@
+
+aula do dia 16/06
+
+
+
+number_format(valor que quer formatar, e o numero de casa decmais, o terceiro parametro é opcionais qual o caracter que vc quer para separar a casa decimais no numero);
+number_format($carro->diaria,2,',' separador decimal,'.' separador de milhar)
+font awesome cria um pacote de icones que quer
+
+ action="" estudar
+
+
+atividade
+
+manipulação de data
+option recebe
+
+tag select cria uma lista suspensa que vai selecionar o valor
+dividida em dua partes
+
+o atributo name vai sempre no select
+
+o valor que estiver na tag option 
+
+o valor que esta sendo passado é o valor que estiver no option
+
+se não tiver o timezone vai pegar a data do servidor
+
+ date_default_timezone_get pegar o horario
+
+ date_default_timezone_set define fuso horario
+
+prepare
+quando trabalha com data
+transformar a string no tipo data strtotime()
+não só consico converter como calcular
+criar um arquivo listar aluguel
+ao invez de usar buttum usar a "pago.ph?id_aluguel="
+exiba tudo primeiro
+fazer um inner join na tabela de cliente e carro
+usar o list carro como base
+

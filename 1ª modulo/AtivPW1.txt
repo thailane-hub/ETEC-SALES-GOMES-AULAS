@@ -1,0 +1,13 @@
+Criar uma pasta nova contendo 5 arquivos HTML.
+
+/index.html
+/contato.html
+/sobre.html
+/servico/ser1.html
+/servico/ser2.html
+
+Cada arquivo HTML deverá conter um título (h1) com o nome página. 
+
+Todas as páginas precisam estar interligadas.
+
+Criar um lorem*3 em cada página.

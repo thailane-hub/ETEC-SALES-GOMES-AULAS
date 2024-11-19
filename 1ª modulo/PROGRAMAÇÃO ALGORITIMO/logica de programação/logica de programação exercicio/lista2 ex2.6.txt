@@ -1,0 +1,28 @@
+{Faça um programa que peça ao usuário uma letra, e exiba se ela é uma consoante ou vogal.}
+
+Program HelloWorld(output);
+
+var p: array [1..5] of char = ('a','e','i','o','u');
+    m: char;
+    i: integer;
+
+begin
+
+    write('Digite uma letra: ');
+    read(m);
+    
+    for i:= 1 to 5 do 
+        begin
+            if m=p [i] then
+                begin
+                    write('Esta letra é uma vogal');
+                        exit;
+                end
+        end;      
+        
+    if m<>ps [i] then
+        begin
+            write('Esta letra é uma consoante');
+                exit;
+        end;
+end.

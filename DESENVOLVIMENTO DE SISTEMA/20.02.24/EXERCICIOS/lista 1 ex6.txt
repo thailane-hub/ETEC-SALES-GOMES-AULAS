@@ -1,0 +1,21 @@
+
+{6 - Crie um programa que irá calcular a área de retângulo.}
+
+Program areaRetangulo(output);
+
+var b: integer;
+var h: integer;
+var r: integer;
+
+begin
+  writeln('informe a base do retângulo: ');
+  read(b);
+  
+  writeln('informe a altura do retângulo: ');
+  read(h);
+  
+  r:= b*h;
+  
+  write('A area do retângulo é: ',r);
+
+end.

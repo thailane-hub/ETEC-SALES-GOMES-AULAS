@@ -1,0 +1,27 @@
+{# Exercício 2.7
+
+Faça um programa que irá receber o ano de nascimento de um usuário e exiba se ele é maior ou menor de idade.
+}
+Program HelloWorld(output);
+
+var i:integer;
+    a:integer;
+    
+
+begin
+    write('Informe o ano de nascimento: ');
+    read(a);
+    
+    i:= 2024-a;
+    
+    if i < 18 then
+        begin
+            write('Menor de idade');
+        end
+        
+    else
+        begin
+            write('Maior de idade');
+        end;
+        
+end.

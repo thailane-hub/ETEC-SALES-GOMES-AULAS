@@ -1,0 +1,10 @@
+Program HelloWorld(output);
+var nome:string;
+    snome:string;
+begin
+writeln('Informe o nome');
+    readln(nome);
+  writeln('informe o sobrenome');
+      readln(snome);
+  writeln(nome,' ',snome);
+end.

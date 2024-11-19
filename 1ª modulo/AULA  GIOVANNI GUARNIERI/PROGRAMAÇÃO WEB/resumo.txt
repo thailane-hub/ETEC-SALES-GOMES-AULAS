@@ -1,0 +1,66 @@
+O que é CSS?
+
+css  é uma linguagem de folha de estilo que  descreve como os elementos HTML devem ser exibido.
+
+O que é HTML?
+
+o HTML é uma linguagem de marcação hipertexto ultilizada para montar a estrurura de uma página
+
+
+Define se a imagem será fixa ou se irá rolar juntamente com o elemento que a contém.
+
+backgroud-attchment: scroll > A imagem rola com a página
+backgroud-attchment: fixed > A imagem é fixa
+
+Ex: 
+body {
+	background-attachment: fixed;  
+} 
+
+O que é modo COMPILADO?
+
+é a abreviação de todas as propriedades listadas 
+
+A declaração abreviada deve seguir a seguinte ordem:
+
+[background-color] | [background-image] | [background-repeat] | [background-attachment] | 
+[background-position]
+
+Ex: 
+body {
+	background: #FFCC66 url(“imagem.jpg") no-repeat fixed right bottom;  
+} 
+
+> Propriedade text-indent:
+
+permite que aplique um recuo na primeira linha de um paragrafo...
+
+
+> Propriedade letter-spacing
+
+Define o espaço entre os caracteres.
+Ex: 
+p {
+		letter-spacing: 3px;
+	} 
+
+A propriedade Text-transform assume quatro valores, None, Capitalize, Uppercase, Lowercase, vamos entender o que cada valor deste faz.
+
+None = Nenhuma formatação (traduzido seria nenhum).
+Capitalize = As primeiras letras de cada palavra ficam com letras maiúsculas (traduzindo seria Capitalizar).
+Uppercase = Coloca todas as letras em maiúscula (traduzindo seria maiúscula).
+Lowercase = Coloca todas as letras em minúsculas (traduzindo seria minúscula).
+
+LinksRemovendo sublinhado dos links
+
+a {
+	text-decoration:none;
+
+}
+
+
+
+
+
+
+

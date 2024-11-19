@@ -1,0 +1,25 @@
+Exercícios - Utilize document.write() para mostrar; 
+
+1 - Criar uma função que receba um valor (X). Essa função deverá exibir todos os valores de 1 até X. 
+
+2 - Criar uma função que receba 5 valores e calcule  e exiba a média aritmética. Também mostrar se o aluno foi aprovado ou reprovado (>= 6 {Aprovado}). 
+
+3 - Criar uma função que receba dois e retorne apenas o maior.
+
+4 - Completar o código da seguinte função:
+
+function calculadora(operador, a, b){
+
+}
+
+var resultado = calculadora("*", 10, 20)
+document.write(resultado); // Deve mostrar 200
+
+5 - Completar o código da seguinte função:
+
+function celsiusParaFahrenheit(celsius){
+
+}
+
+var resultado = celsiusParaFahrenheit(30)
+document.write(resultado); // Deve mostrar 86

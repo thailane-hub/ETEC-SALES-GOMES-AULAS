@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo - Tarefas</title>
+    <script src="js/script.js" defer></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        form fieldset {
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        ul li{
+            background-color: #ccc;
+            margin-top: 10px;
+            padding: 5px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .campo{
+            display: flex;
+            flex-direction: column;
+        }
+
+        main{
+            max-width: 600px;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <form>
+            <fieldset>
+                <legend>Adicionar tarefa</legend>
+                <div class="campo">
+                    <label for="titulo">Título da tarefa</label>
+                    <input type="text" id="titulo" name="titulo" autocomplete="off">
+                </div>
+                <div class="campo">
+                    <label for="titulo">Data</label>
+                    <input type="date" id="data" name="data" autocomplete="off">
+                </div>
+                <button id="btnadd">Adicionar</button>
+            </fieldset>
+        </form>
+    </header>
+    <main>
+        <ul id="container">
+            <li>
+                <span>Item 1</span>
+                <button>Excluir</button>
+            </li>
+        </ul>
+    </main>
+</body>
+
+</html>

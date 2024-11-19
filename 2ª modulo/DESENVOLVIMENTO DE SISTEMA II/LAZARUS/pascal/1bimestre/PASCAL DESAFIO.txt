@@ -1,0 +1,480 @@
+1 - Crie um programa que irá receber o nome e sobrenome do usuário separadamente e exiba logo em seguida o resultado em uma única linha.
+
+Program HelloWorld(output);
+  var nome: string;
+  sobrenome: string;
+ begin
+writeln('Insira seu nome');
+    readln(nome);
+ writeln('Insira seu sobrenome');
+    readln(sobrenome);
+    writeln('Olá ' ,nome , ' ' ,sobrenome);
+end.
+
+2 - Crie um programa que irá receber um número de 1 a 7, e exiba o dia da semana que pertence. Se escolher 1, exibir “o dia escolhido é domingo”, etc.
+
+Program diadasemana;
+var numero: integer;
+    begin
+     writeln('Informe um numero');
+     read(numero);
+     
+    if numero =1 then
+    begin
+         writeln('O dia é Domingo')
+    end;
+    
+    if numero =2 then
+    begin
+        writeln('O dia é Segunda-Feira')
+    end;
+    
+    if numero =3 then
+    begin
+        writeln('O dia é Terça-Feira')
+    end;
+    
+    if numero =4 then
+    begin
+        writeln('O dia é Quarta-Feira')
+    end;
+    
+    if numero =5 then
+    begin
+        writeln('O dia é Quinta-Feira')
+    end;
+    
+    if numero =6 then
+    begin
+        writeln('O dia é Sexta-Feira')
+    end;
+    
+    if numero =7 then
+    begin
+        writeln('O dia é Sábado')
+    end;
+ 
+end.
+
+3 - Crie um programa que irá receber um número inteiro, e exiba se o número é positivo, negativo ou igual a zero.
+
+Program diadasemana;
+var numero: integer;
+    begin
+     writeln('Informe um numero');
+     read(numero);
+     
+    if numero < 0 then
+    begin
+    writeln('O numero é Negativo');
+    end;
+     if numero > 0 then
+    begin
+    writeln('o numero é positivo');
+    end;
+     if numero = 0 then
+    begin
+    writeln('igual a zero');
+    end;
+ 
+end.
+
+4 - Crie um programa que irá receber uma idade e exiba a classificação se a pessoa é criança, adolescente, adulto ou idoso.
+
+Program diadasemana;
+var idade: integer;
+    begin
+     writeln('Informe a idade');
+     read(idade);
+     
+    if idade < 12 then
+    begin
+    writeln('Criança');
+    end;
+     if (idade > 12) and (idade < 18)  then
+    begin
+    writeln('Adolecente');
+    end;
+     if (idade > 18) and (idade < 60) then
+    begin
+    writeln('Adulto');
+    end;
+      if idade > 60 then
+    begin
+    writeln('idoso');
+    end;
+    readln;
+end.
+
+5 - Crie um programa que irá calcular a área de um quadrado.
+
+Program diadasemana;
+var area, resultado: integer;
+    begin
+     writeln('Informe a área');
+     readln(area);
+     resultado:= area * area;
+    writeln('A área é ', resultado);
+end.
+
+6 - Crie um programa que irá calcular a área de retângulo.
+
+Program HelloWorld(output);
+var base, altura, resultado: real;
+begin
+     writeln('Informe a Base');
+    readln(base);
+     writeln('Informe a Altura');
+    readln(altura);
+    resultado:= base * altura;
+    writeln('A area é ', resultado:0:2);
+end.
+
+7 - Crie um programa no qual o usuário irá digitar um salário qualquer, e o programa irá exibir esse salário subtraído de 10%.
+
+program huhu;
+var salario,resultado:real;
+
+begin
+
+writeln('Informe seu Sálario: ');
+readln(salario);
+resultado:= salario * 0.9;
+
+writeln('Seu salario -10% é: ', resultado:0:2,' Reais');
+
+end.
+
+# Exercício 2.1
+
+Crie as variáveis, seu respectivos tipos e atribua os valores definidos por você para cada item abaixo seguindo o exemplo. Logo em seguida, exiba os itens em tela com o writeln.
+
+Exemplo:
+
+- Nome
+- idade
+- salario
+- cidade
+- estado
+- data_de_nascimento
+- CPF
+- RG
+- endereco
+- conectado
+- bairro
+- data_atual
+- ano
+- percentual_de_desconto
+- altura
+- peso
+- valor_em_reais
+- hora_atual
+- habilitado
+program huhu;
+var hora_atual, data_atual, nome, endereco, bairro, cidade, data_de_nascimento, estado, percentual_de_desconto: string;
+conectado, habilitado: bolean;
+cpf, rg, altura, idade, ano: integer;
+salario, valor_em_reais, peso: real;
+
+
+begin
+
+nome := 'Thailane Santos Araujo';
+idade := 22;
+salario := 1500;
+cidade := 'Tatui';
+estado := 'São Paulo';
+data_de_nascimento := '22/10/1997';
+cpf := 777888777222999;
+rg := 9995555511122363;
+endereco := 'Rua das Maravilhas' ;
+conectado := true;
+bairro := 'Almeidas';
+data_atual := '27/02/24';
+ano := 2024;
+percentual_de_desconto := '10%';
+altura := 1.74;
+valor_em_reais := 1.500;
+hora_atual := '20:34';
+habilitado := true;
+
+ writeln('O nome é: ', nome);
+ writeln('A idade é: ', idade);
+ writeln('O sálario é: ', salario);
+ writeln('A cidade é: ', cidade);
+ writeln('O estado é: ', estado);
+ writeln('A data de nascimento é : ', data_de_nascimento);
+ writeln('O cpf é: ', cpf);
+ writeln('O rg é: ', rg);
+ writeln('O endereço é: ', endereco);
+ writeln('O usuário esta conectado?: ', conectado);
+ writeln('O Bairro é: ', bairro);
+ writeln('A data atual é : ', data_atual);
+ writeln('O ano é ', ano);
+ writeln('O percentual é ', percentual_de_desconto);
+ writeln('A altura é ', altura);
+ writeln('O Valor em reais é', valor_em_reais);
+ writeln('A hora atual é', hora_atual);
+  writeln('O usuário está habilitado? ', habilitado);
+ 
+end.
+
+{# Exercício 2.2
+
+Crie um algoritmo em Pascal resolvendo as equações lógicas abaixo e exibindo se o resultado é positivo ou negativo na tela.
+
+**Considerando:**
+
+    **A = 10**
+
+    **B = 5**
+
+    **C = 2**
+
+Então:.
+
+1. B == A (false)
+2. A != B
+3. B != A
+4. !(A != B)
+5. A <= B + C
+6. A >= B + C
+7. (B == C && A == B) || (A == B && B != C) || (A == C && B != C) (?)
+8. (A mod B == 0) && (C mod B == 1)
+}
+
+
+Program HelloWorld(output);
+
+var a,b,c:integer;
+    r: boolean;
+
+begin
+
+    A:= 10;
+    B:= 5;
+    C:= 2;
+    
+    R:= B=A;
+    writeln('1: ',R);
+    
+    R:= A<> B;
+    writeln('2: ',R);
+   
+    R:= B <> A;
+    writeln('3: ',R);
+
+    R:= not(A <> B);
+    writeln('4: ',R);
+
+    R:= A <= B + C;
+    writeln('5: ',R);
+    
+    R:= A >=  + C;
+    writeln('6: ',R);
+    
+    R:= ((B = C)and (A = B)) or ((A = B) and (B <> C)) or ((A = C) and (B <> C));
+    writeln('7: ',R);
+    
+    R:= (A mod B = 0) and (C mod B = 1);
+    writeln('8: ',R);
+    
+end.
+
+{# Exercício 2.3
+
+Elabore um programa que irá receber a nota do aluno de 0 a 10, e exiba se o aluno está aprovado, reprovado ou de recuperação.
+
+- Nota < 6 reprovado
+- Nota entre 6 e 7 recuperação
+- Nota > 7 aprovado
+}
+
+Program HelloWorld(output);
+
+var nota: real;
+
+begin
+
+    writeln('Informe a nota do aluno');
+    read(nota);
+    
+    if nota < 6 then
+        begin
+            write(' Reprovado');
+        end;    
+            
+    if nota >7 then
+        begin
+            write(' Aprovado');
+        end;
+        
+    if (nota >= 6) and (nota <=7) then
+        begin
+            write(' Recuperação');
+        end;
+            
+end.
+
+{# Exercício 2.4
+
+Elabore um programa que pergunte a idade do usuário, e exiba na tela se ele pode votar ou não.
+}
+Program HelloWorld(output);
+
+var a:integer;
+    
+
+begin
+    write('Informe sua idade: ');
+    read(a);
+    
+
+    
+    if a < 16 then
+        begin
+            write('Nâo pode votar');
+        end
+        
+    else
+        begin
+            write('Pode votar');
+        end;
+        
+end.
+{# Exercício 2.5
+
+Elabore um programa que irá receber o nome de um mês, e exiba se o mês é do primeiro semestre ou segundo semestre.}
+
+Program HelloWorld(output);
+
+var ps: array [1..6] of string = ('janeiro','fevereiro','março','abril','maio','junho');
+    m: string;
+    i: integer;
+
+begin
+
+    write('Informe um mês: ');
+    read(m);
+    
+    for i:= 1 to 6 do 
+        begin
+            if m=ps [i] then
+                begin
+                    write(' primeiro semestre');
+                        exit;
+                end
+        end;      
+        
+    if m<>ps [i] then
+        begin
+            write(' segundo semestre');
+                exit;
+        end;
+end.
+{Faça um programa que peça ao usuário uma letra, e exiba se ela é uma consoante ou vogal.}
+
+Program HelloWorld(output);
+
+var p: array [1..5] of char = ('a','e','i','o','u');
+    m: char;
+    i: integer;
+
+begin
+
+    write('Digite uma letra: ');
+    read(m);
+    
+    for i:= 1 to 5 do 
+        begin
+            if m=p [i] then
+                begin
+                    write('Esta letra é uma vogal');
+                        exit;
+                end
+        end;      
+        
+    if m<>ps [i] then
+        begin
+            write('Esta letra é uma consoante');
+                exit;
+        end;
+end.
+{# Exercício 2.7
+
+Faça um programa que irá receber o ano de nascimento de um usuário e exiba se ele é maior ou menor de idade.
+}
+Program HelloWorld(output);
+
+var i:integer;
+    a:integer;
+    
+
+begin
+    write('Informe o ano de nascimento: ');
+    read(a);
+    
+    i:= 2024-a;
+    
+    if i < 18 then
+        begin
+            write('Menor de idade');
+        end
+        
+    else
+        begin
+            write('Maior de idade');
+        end;
+        
+end.
+{# Exercício 2.8
+
+Faça um programa que irá receber três valores inteiros, e exiba os valores em ordem crescente.
+}
+
+Program HelloWorld(output);
+
+var a,b,c: integer;
+
+begin
+  
+    write('Informe o 1º valor: ');
+    read(a);
+    write('Informe o 2º valor: ');
+    read(b);
+    write('Informe o 3º valor: ');
+    read(c);
+
+    if (a<b) and (a<c) and(b<C) then
+        begin
+            write('A ordem crescente é: ',a,' ',b,' ',c);
+        end;
+        
+    if (a<b) and (a<c) and(c<b) then
+        begin
+            write('A ordem crescente é: ',a,' ',c,' ',b);
+        end;
+        
+    if (b<c) and (b<a) and(a<C) then
+        begin
+            write('A ordem crescente é: ',b,' ',a,' ',c);
+        end;
+        
+    if (b<c) and (b<a) and(c<a) then
+        begin
+            write('A ordem crescente é: ',b,' ',c,' ',a);
+        end;
+        
+    if (c<b) and (c<a) and(a<b) then
+        begin
+            write('A ordem crescente é: ',c,' ',a,' ',b);
+        end;
+        
+        
+    if (c<b) and (c<a) and(b<a) then
+        begin
+            write('A ordem crescente é: ',c,' ',b,' ',a);
+        end;
+        
+  
+end.

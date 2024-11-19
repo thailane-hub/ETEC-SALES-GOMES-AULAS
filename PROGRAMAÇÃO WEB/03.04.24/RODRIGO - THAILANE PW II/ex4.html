@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            margin: auto;
+            height: 100vh;
+            align-items: center;
+            flex-direction: column;
+            background-color: gray;
+            text-transform: uppercase;
+        }
+        
+        form{
+            margin-top: 20px;
+        }
+        #entrada{
+            gap: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+    </style>
+</head>
+<body>
+            <fieldset>
+                <legend>ESCOLHA UMA FUNÇÃO</legend>
+                <p>
+                    1: Retorna a área de um triângulo equilátero.<br>
+                    2: Retorna o maior valor.<br>
+                    3: Retorna o menor valor.<br>
+                    4: Retorna a soma.<br>
+                    5: Retorna a subtração.<br>
+                    6: Retorna os numeros entre o informados e eles mesmos.<br>
+                    7: Retorna a área de um retângulo.
+                </p>
+            </fieldset>
+
+        <form action="ex4.php">
+            <fieldset>
+                <legend>INFORME OS VALORES E A FUNÇÃO DESEJADA</legend>
+                <div id="entrada">
+                    <div>
+                        <label for="v1">VALOR 1</label>
+                        <input type="number" id="v1" name="v1">
+                    </div>
+
+                    <div>
+                        <label for="v2">VALOR 2</label>
+                        <input type="number" id="v2" name="v2">
+                    </div>
+
+                    <div>
+                        <label for="op">OPÇÃO </label>
+                        <input type="number" id="op" name="op" min="1" max="7">
+                    </div>
+
+                    <button>Executar</button>
+                </div>
+            </fieldset>
+        </form>
+</body>
+</html>

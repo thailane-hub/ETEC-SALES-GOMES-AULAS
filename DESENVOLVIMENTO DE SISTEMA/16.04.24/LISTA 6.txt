@@ -1,0 +1,408 @@
+{1 - Crie um type contendo os valores pessoa física ou pessoa jurídica. 
+Crie uma variável tipo_pessoa para receber esse type. 
+Faça um IF para analisar e responder se o tipo_pessoa é pessoa física ou jurídica.}
+Program HelloWorld(output);
+
+type
+    tipo_pessoa = (juridica,fisica);
+
+var
+    pessoa: tipo_pessoa;
+    
+begin
+    
+    writeln('VOCE É UMA PESSOA JURIDICA OU FISICA');
+    readln(pessoa);
+    
+    if(pessoa = juridica) then
+    begin
+        writeln('VOCÊ É UMA PESSOA JURIDICA')
+    end
+    else
+    begin
+        writeln('VOCÊ É UMA PESSOA FISICA')
+    
+    end;
+end.
+
+--------------------------------------------------------------------------------------------------------------------------------------
+
+{2 - Crie um type aluno contendo os dados: Nome, RM, Telefone, Email.}
+Program HelloWorld(output);
+
+type 
+    tipo_aluno = record
+    nome: string[40];
+    rm: integer;
+    telefone: string[9];
+    email: string[50];
+    end;
+    
+    var
+    aluno: array[1..3] of tipo_aluno;
+    i,inicio,fim: integer;
+    
+
+begin
+    inicio:=1;
+    fim:=3;
+    
+    writeln('CADASTRO DE ALUNO(A)S');
+    writeln('--------------------------');
+    writeln();
+    
+    for i:= inicio to fim do
+    begin
+        writeln('DADOS DO(A) ',i,'º ALUNO(A)');
+        writeln();
+        write('Informe o nome do aluno: ');
+        readln(aluno[i].nome);
+        write('Informe o rm do aluno: ');
+        readln(aluno[i].rm);
+        write('Informe o telefone do aluno: ');
+        readln(aluno[i].telefone);
+        write('Informe o e-mail do aluno: ');
+        readln(aluno[i].email);
+        writeln('--------------------------');
+    end;
+    
+    for i:= inicio to fim do 
+    begin
+        writeln();
+        writeln('INORMAÇÕES DOS ALUNOS');
+        writeln();
+        writeln('NOME ALUNO(A): ',aluno[i].nome);
+        writeln('RM ',aluno[i].rm);
+        writeln('TELEFONE: ',aluno[i].telefone);
+        writeln('E-MAIL: ',aluno[i].email);
+        writeln('--------------------------');
+    end;
+    
+    
+end.
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+{3 - Crie um algoritmo que irá cadastrar 2 veículos. Os types que deverão ser criados irão abranger:
+
+- carro
+- caminhao
+- onibus
+- aviao
+- trem
+- barco
+- balao
+- helicoptero
+- gasolina
+- etanol
+- flex
+- passeio
+- esportivo
+- novo
+- usado}
+
+Program HelloWorld(output);
+
+type 
+    veiculo = record
+    tipo: (carro, caminhao, onibus, aviao, trem, barco, balao, helicoptero);
+    combustivel: (gasolina, etanol, flex) ;
+    finalidade: (passeio, esportivo);
+    estado: (novo, usado);
+    end;
+    
+    var
+    transporte: array[1..2] of veiculo;
+    i,inicio,fim: integer;
+    
+
+begin
+    inicio:=1;
+    fim:=2;
+    
+    writeln('CADASTRO DE VEICULOS');
+    writeln('--------------------------');
+    writeln();
+    
+    for i:= inicio to fim do
+    begin
+        writeln('INSIRA OS DADOS DO ',i,'º VEICULO');
+        writeln();
+        write('Informe o tipo de veiculo: ');
+        readln(transporte[i].tipo);
+        write('Informe o tipo de combustivel: ');
+        readln(transporte[i].combustivel);
+        write('Informe a finalidade do veiculo (passeio ou esportivo) : ');
+        readln(transporte[i].finalidade);
+        write('Informe o estado do veiculo novo ou usado: ');
+        readln(transporte[i].estado);
+        writeln('--------------------------');
+        writeln();
+    end;
+        writeln('**************************');
+        writeln();
+        writeln('INORMAÇÕES DOS VEICULOS');
+        writeln();
+        writeln('**************************');
+        
+    for i:= inicio to fim do 
+    begin
+        writeln();
+        writeln('INORMAÇÕES DO ',i,'º VEICULO');
+        writeln();
+        writeln('TIPO DO VEICULO: ',transporte[i].tipo);
+        writeln('TIPO DO COMBUSTIVEL: ',transporte[i].combustivel);
+        writeln('FINALIDADE: ',transporte[i].finalidade);
+        writeln('ESTADO DO VEICULO: ',transporte[i].estado);
+        writeln('--------------------------');
+    end;
+    
+end.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+{4 - Crie um type chamado "cor" que representa as cores primárias. Crie um programa que peça ao usuário para escolher uma cor e imprima uma mensagem personalizada com base na cor escolhida.}
+Program HelloWorld(output);
+
+type
+    cor = (azul,vermelho,amarelo);
+    
+var 
+    c: cor;
+
+begin
+    writeln('RECEBA UMA MENSAGEM COM FORME A COR INFORMADA');
+    writeln('---------------------------------------------');
+    writeln();
+    write('ESCOLHA UMA COR: VERMELHO, AMARELO OU AZUL: ');
+    readln(c);
+    writeln('---------------------------------------------');
+
+    if(c=azul) then
+    begin
+        writeln('O CÉU É AZUL');
+    end;
+      
+    if(c=vermelho) then
+    begin
+        writeln('A ROSA É VERMELHA');
+    end;
+      
+    if(c=amarelo) then
+    begin
+        writeln('O GIRASSOL É AMARELO');
+    end;
+  
+end.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+{5 - Crie um type chamado "fruta" que representa várias frutas. Crie um pequeno programa que peça ao usuário para escolher uma fruta e então imprima uma mensagem informando se a fruta escolhida está disponível ou não. Utilize for, procedures.}
+Program HelloWorld(output);
+
+type
+    fruta = (maca,banana,laranja,morango,pera);
+    
+var 
+    x : fruta;
+
+procedure entrada;
+begin
+    write('QUAL FRUTA VOCÊ DESEJA: ');
+    readln(x);
+end;
+
+procedure processamento;
+begin
+    if (x = maca) or (x = banana) or  (x = laranja) or  (x = morango) or (x =pera) then
+    begin
+        write('Disponivel')
+    end
+    else
+    begin
+        write('Indisponivel')
+    end;
+end;
+
+begin
+    entrada;
+    processamento;
+end.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+{6 - Crie um type chamado "animal" que representa vários animais. Crie um programa que peça ao usuário para escolher um animal e imprima uma mensagem com uma curiosidade sobre o animal escolhido. Utilize array, record, procedure, for, if, etc.}
+
+Program HelloWorld(output);
+
+type 
+    animal = (foca,baleia,leao,zebra,leopardo);
+    
+    
+var 
+    x: animal;
+
+    animais : array[1..5] of string;
+    
+
+procedure entrada;
+begin
+    write('Escolha um animal: ');
+    readln(x);
+end;
+
+
+
+procedure saida;
+begin
+    animais[1]:= 'Focas são excelentes nadadoras e podem mergulhar a grandes profundidades.';
+    animais[2]:= 'Baleias são os maiores animais do planeta e se comunicam através de sons complexos.' ;
+    animais[3]:= 'Leões vivem em grupos chamados de "manadas" e são conhecidos por sua juba.' ;
+    animais[4]:= 'Zebras têm listras únicas que ajudam a confundir predadores.';
+    animais[5]:= 'Os leopardos são ágeis e excelentes caçadores.';
+end;
+
+procedure processamento;
+begin
+    if x = foca then
+    begin
+        writeln(animais[1]);
+    end;
+    if x = baleia then
+    begin
+        writeln(animais[2]);
+    end;
+    if x = leao then
+    begin
+        writeln(animais[3]);
+    end;
+    if x = zebra then
+    begin
+        writeln(animais[4]);
+    end;
+    if x = leopardo then
+    begin
+        writeln(animais[5]);
+    end;
+end;
+
+begin
+    entrada;
+    saida;
+    processamento;
+end.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+{7 - Crie um type chamado "materia" que representa as matérias do seu curso de DS. Crie um programa que peça ao usuário para escolher uma matéria e imprima uma mensagem explicando sucintamente o que é ensinado na matéria. Utilize array, record, procedure, for, if, etc.}
+
+Program HelloWorld(output);
+
+type 
+    materia = (ds,pw,bd,se,aps);
+    
+    
+var 
+    x: materia;
+
+    disciplinas : array[1..5] of string;
+    
+
+procedure entrada;
+begin
+    write('Escolha uma materia (ds,pw,bd,se,aps): ');
+    readln(x);
+end;
+
+procedure processamento;
+begin
+    disciplinas[1]:= 'Em DS ira aprender a linguagem pascal e o usar o software lazarus';
+    disciplinas[2]:= 'Em PW ira aprender html, css, javascript,php.' ;
+    disciplinas[3]:= 'Em BD ira aprender sql, wamp' ;
+    disciplinas[4]:= 'Em SE ira aprender a usar o arduino e programa-lo';
+    disciplinas[5]:= 'EM APS ira aprender a analisar e planejar projetos';
+end;
+
+procedure saida;
+begin
+    if x = ds then
+    begin
+        writeln( disciplinas[1]);
+    end;
+    if x = pw then
+    begin
+        writeln( disciplinas[2]);
+    end;
+    if x = bd then
+    begin
+        writeln( disciplinas[3]);
+    end;
+    if x = se then
+    begin
+        writeln( disciplinas[4]);
+    end;
+    if x = aps then
+    begin
+        writeln( disciplinas[5]);
+    end;
+end;
+
+begin
+    entrada;
+    processamento;    
+    saida;
+end.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+{8 - Crie um type chamado "estação" que representa as quatro estações do ano. Crie um programa que peça ao usuário para escolher uma estação e imprima uma mensagem com uma curiosidade sobre a estação escolhida. Utilize array, record, procedure, for, if, etc.}
+
+Program HelloWorld(output);
+
+type 
+    estacao = (primavera,outono,verao,inverno);
+    
+    
+var 
+    x: estacao;
+
+    clima : array[1..4] of string;
+    
+
+procedure entrada;
+begin
+    write('Escolha uma estaçao (primavera, outono, verao, inverno): ');
+    readln(x);
+end;
+
+
+
+procedure processamento;
+begin
+    clima[1]:= 'No primeiro dia da primavera, o hemisfério norte e sul recebem a mesma quantidade de sol e tem o dia e a noite com a mesma duração de 12 horas cada.';
+    clima[2]:= 'Um dos aspectos mais marcantes do outono é a transformação da natureza. As folhas das árvores ficam entre tons de amarelo e vermelho e algumas espécies passam por uma queda de folhas. Isso acontece porque as folhas não resistem ao frio do inverno.' ;
+    clima[3]:= 'Essa estação é caracterizada especialmente pelas altas temperaturas. Há regiões em que os termômetros marcam mais de 40 °C. Os dias durante o verão são mais longos que as noites, e isso deve-se à maior incidência de radiação solar no hemisfério em que está vigente.' ;
+    clima[4]:= 'O Inverno, uma as quatro estações do ano, é caracterizado por temperaturas mais baixas. É mais sentido no hemisfério norte, que conta com estações melhores definidas. No hemisfério sul há também regiões de frio mais intenso, de clima mais seco e baixa incidência de chuvas.';
+end;
+
+procedure saida;
+begin
+    if x = primavera then
+    begin
+        writeln( clima[1]);
+    end;
+    if x = outono then
+    begin
+        writeln( clima[2]);
+    end;
+    if x = verao then
+    begin
+        writeln( clima[3]);
+    end;
+    if x = inverno then
+    begin
+        writeln( clima[4]);
+    end;
+
+end;
+
+begin
+    entrada;
+    processamento;
+    saida;
+end.

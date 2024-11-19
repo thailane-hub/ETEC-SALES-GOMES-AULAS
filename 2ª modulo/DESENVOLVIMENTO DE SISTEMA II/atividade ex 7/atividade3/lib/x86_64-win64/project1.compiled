@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <Compiler Value="E:\lazaros\fpc\3.2.2\bin\x86_64-win64\fpc.exe" Date="1482330472"/>
+  <Params Value=" -MObjFPC -Scghi -O1 -gw3 -gl -WG -l -vewnhibq &quot;-FiE:\ETEC SALES\2ª modulo\DIOGO\atividade ex 7\atividade3\lib\x86_64-win64&quot; -FuE:\lazaros\lcl\units\x86_64-win64\win32 -FuE:\lazaros\lcl\units\x86_64-win64 -FuE:\lazaros\components\freetype\lib\x86_64-win64 -FuE:\lazaros\components\lazutils\lib\x86_64-win64 -FuE:\lazaros\packager\units\x86_64-win64 &quot;-FuE:\ETEC SALES\2ª modulo\DIOGO\atividade ex 7\atividade3\&quot; &quot;-FUE:\ETEC SALES\2ª modulo\DIOGO\atividade ex 7\atividade3\lib\x86_64-win64\&quot; &quot;-FEE:\ETEC SALES\2ª modulo\DIOGO\atividade ex 7\atividade3\&quot; &quot;-oE:\ETEC SALES\2ª modulo\DIOGO\atividade ex 7\atividade3\project1.exe&quot; -dLCL -dLCLwin32 project1.lpr"/>
+  <Complete Value="False"/>
+</CONFIG>

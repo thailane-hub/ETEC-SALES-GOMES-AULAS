@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dia das Mulheres</title>
+    <style>
+        span {
+            display: inline-block;
+            color: white;
+            font-size: 8em;
+        }
+
+        .animado {
+            animation: efeito 200ms forwards;
+        }
+
+        .espaco {
+            margin-left: 30px;
+        }
+
+        @keyframes efeito {
+            0% {
+                transform: translateY(500px);
+                color: white;
+            }
+
+            100% {
+                transform: translateY(0);
+                color: purple;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <button id="executar">
+        Executar
+    </button>
+
+    <br>
+
+    <span>F</span>
+    <span>e</span>
+    <span>l</span>
+    <span>i</span>
+    <span>z</span>
+    <span class="espaco"> </span>
+    <span>d</span>
+    <span>i</span>
+    <span>a</span>
+    <span class="espaco"> </span>
+    <span>d</span>
+    <span>a</span>
+    <span>s</span>
+    <span class="espaco"> </span>
+    <span>m</span>
+    <span>u</span>
+    <span>l</span>
+    <span>h</span>
+    <span>e</span>
+    <span>r</span>
+    <span>e</span>
+    <span>s</span>
+
+</body>
+<script>
+    const letras = document.querySelectorAll("span");
+    const btn = document.getElementById("executar");
+
+    btn.addEventListener("click", () => {
+        letras.forEach((l, i) => {
+            setTimeout(() => {
+                l.classList.add("animado")
+            }, i * 50);
+        });
+    });
+
+</script>
+
+</html>

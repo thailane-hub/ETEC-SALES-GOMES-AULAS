@@ -1,0 +1,222 @@
+
+Escreva um programa que imprima os números de 1 a 10 usando uma estrutura while.
+
+Program EstruturaWhile;
+var
+	contador: integer;
+begin
+
+	contador := 1;
+
+	while (contador <= 5) do
+	begin
+	  writeln(contador);
+	  contador := contador + 1
+	end;
+
+end.
+
+
+Crie um programa que solicite ao usuário um número e, em seguida, imprima a tabuada desse número usando uma estrutura while.
+
+Program ex2;
+var
+	contador: integer;
+	i : integer;
+	r: integer;
+begin
+    writeln('insira um numero');
+    readln(i);
+	contador := 0;
+	while (contador <= 10) do
+	begin
+	  writeln( contador,' x ', i , ' = ' , r);
+	  contador := contador + 1;
+	  r := i*contador;
+	end;
+end.
+
+Crie um programa que solicite ao usuário um número e, em seguida, imprima a tabuada desse número usando uma estrutura for.
+Program ex2;
+var
+	i : integer;
+	b: integer;
+	r: integer;
+	
+begin
+
+    writeln('insira um numero');
+    readln(i);
+  
+	for b:= 0 to 10 do
+	
+	begin
+	  r:= b*i;
+	  writeln( b ,' x ', i , ' = ' ,r );
+	 
+	end;
+end.
+
+Desenvolva um programa que imprima todos os números pares entre 1 e 100 usando uma estrutura while e outra com a estrutura for.
+
+
+(USANDO FOR)
+
+Program ex2;
+var
+	i : integer;
+	b: integer;
+	r: integer;
+	
+begin
+  
+	for b:= 1 to 100 do
+	
+        begin
+            r:= b mod 2;
+            if r = 0 then
+                begin
+	                write(' ', b );
+	           end;
+        end;
+end.
+
+Desenvolva um programa que imprima todos os números pares entre 1 e 100 usando uma estrutura while e outra com a estrutura while.
+
+Program ex2;
+var
+	i : integer;
+	b: integer;
+	r: integer;
+	
+begin
+  
+	while (b <=100 ) do
+	
+        begin
+            b := b + 1;
+            r:= b mod 2;
+            if r = 0 then
+                begin
+	                write(' ', b );
+	           end;
+        end;
+end.
+
+Escreva um programa que solicite ao usuário dois números (inicio e fim) e, em seguida, imprima todos os números entre eles usando uma estrutura while e for.
+
+
+var
+    c: integer;
+	i : integer;
+	f: integer;
+	
+	
+begin
+    writeln('insira um valor inicial');
+    readln(i);
+     writeln('insira um valor final');
+    readln(f);
+     c := i-1;  { -1 se não ele vai pegar a próxima váriavel}
+     
+    while (c < f) do
+    begin
+        c:= c+1; { contador, ultiliza este modo no pascal}
+        writeln(c);
+       end;
+end.
+
+
+usando for:
+
+var
+	i : integer;
+	f: integer;
+	
+	
+begin
+    writeln('insira um valor inicial');
+    readln(i);
+     writeln('insira um valor final');
+    readln(f);
+    
+    for i := i to f do
+    begin
+        writeln(i);
+       end;
+end.
+
+
+Desenvolva um programa que solicite ao usuário um número e, em seguida, imprima a soma de todos os números de 1 até o número informado usando uma estrutura for.
+
+var
+	i : integer;
+	r: integer;
+	s: integer;
+	
+begin
+    writeln('insira o valor');
+    readln(r);
+i:=0;
+    for i := 0 to r-1 do 
+    begin
+        r:= i+1;
+        s:= s+r;
+       end;
+        writeln(' ',s);
+end.
+
+Crie um algoritmo que exiba uma linha com 10 asteriscos.
+
+var
+	i : integer;
+
+	
+begin
+
+    for i := 1 to 10  do 
+    begin
+        write('*');
+       end;
+end.
+
+Crie um algoritmo que exiba uma coluna com 10 asteriscos.
+
+var
+	i : integer;
+
+	
+begin
+
+    for i := 1 to 10  do 
+    begin
+        writeln('*');
+       end;
+end.
+
+
+
+
+var
+	a : integer;
+	b : integer;
+	c: integer;
+	
+Escreva um programa que irá imprimir um quadrado de asteriscos. O tamanho do quadrado será informado pelo usuário.
+	
+begin
+    writeln('insira o tamanho');
+    readln(c);
+    for a := 1 to c  do 
+    begin
+       for b := 1 to c do 
+             begin
+             write('*');
+             end;
+     writeln();
+     end;
+end.
+
+
+
+

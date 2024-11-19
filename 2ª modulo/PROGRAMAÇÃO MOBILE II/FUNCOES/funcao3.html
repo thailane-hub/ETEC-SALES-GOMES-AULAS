@@ -1,0 +1,21 @@
+
+
+
+
+
+
+<script>
+function lerValor(msg = "Digite um Valor"){
+    let valor = parseFloat(prompt(msg));
+    return valor;
+}
+function calcularMedia(n1, n2, n3){
+    return(n1+n2+n3)/3;
+}
+
+var nota1 = lerValor("Digite a 1º Nota");
+var nota2 = lerValor("Digite a 2º Nota");
+var nota3 = lerValor();
+var media = calcularMedia(nota1, nota2, nota3);
+alert(media .toFixed(2));
+</script>

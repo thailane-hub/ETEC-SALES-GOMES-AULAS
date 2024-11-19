@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            height: 100vh;
+            background-color: greenyellow;
+            align-items: center;
+            justify-content: center;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+        #entrada{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            gap: 5px;
+
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <form action="ex2.php">
+            <fieldset>
+                <legend>calcular média</legend>
+                <div id="entrada">
+                    <div>
+                        <label for="media1">Média 1</label>
+                        <input type="number" min="0" max="10" placeholder="Informe a media'" name="me1" id="me1">
+                    </div>
+                    <div>
+                        <label for="media2">Média 2</label>
+                        <input type="number" min="0" max="10" placeholder="Informe a media" name="me2" id="me2">
+                    </div>
+                    <div>
+                        <button>Calcular</button>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+    </main>
+</body>
+</html>

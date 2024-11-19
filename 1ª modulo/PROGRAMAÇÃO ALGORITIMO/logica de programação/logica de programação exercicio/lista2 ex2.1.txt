@@ -1,0 +1,66 @@
+Program HelloWorld(output);
+
+var nome: string;
+    idade: integer;
+    salario: real;
+    cidade: string;
+    estado: string;
+    data_de_nascimento: string;
+    cpf: real;
+    rg: real;
+    endereco: string;
+    conectado: boolean;
+    bairro: string;
+    data_atual: string;
+    ano: integer;
+    percentual_de_desconto: real;
+    altura: real;
+    peso: real;
+    valor_em_reais: real;
+    hora_atual: string;
+    habilitado: boolean;
+    
+begin
+
+    nome:='Fulano';
+    idade:= 26;
+    salario:=4018.86;
+    cidade:='Tatuí';
+    estado:='SP';
+    data_de_nascimento:= '11/06/1997';
+    cpf:= 48874922567;
+    rg:= 449577559;
+    endereco:= 'Antonio de oliveira';
+    conectado:= true;
+    bairro:='Jardins de Tatuí';
+    data_atual:='24/02/2024';
+    ano:= 2024;
+    percentual_de_desconto:=10.50;
+    altura:= 1.75;
+    peso:= 75.43;
+    valor_em_reais:= 1272.59;
+    hora_atual:='22:34';
+    habilitado:= false;
+    
+    writeln('Nome: ',nome);
+    writeln('Idade: ',idade);
+    writeln('Salario: ',salario:0:2);
+    writeln('Cidade: ',cidade);
+    writeln('Estado: ',estado);
+    writeln('DN: ',data_de_nascimento);
+    writeln('CPF: ',cpf:11:0);
+    writeln('RG: ',rg:9:0);
+    writeln('Endereço: ',endereco);
+    writeln('Conectado: ',conectado);
+    writeln('Bairro: ',bairro);
+    writeln('Data Atual: ',data_atual);
+    writeln('Ano: ',ano);
+    writeln('Percentual de desconto: ',percentual_de_desconto:0:2,' %');
+    writeln('Altura: ',altura:0:2, ' m');
+    writeln('Peso: ',peso:0:2,' kg');
+    writeln('Valor em reais: ','R$ ',valor_em_reais:0:2);
+    writeln('Hora atual: ',hora_atual);
+    writeln('Habilitado: ',habilitado);
+    
+    
+end.

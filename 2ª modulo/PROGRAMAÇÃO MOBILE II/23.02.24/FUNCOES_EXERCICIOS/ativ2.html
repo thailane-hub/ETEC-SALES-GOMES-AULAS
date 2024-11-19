@@ -1,0 +1,31 @@
+<!-- 2 - Criar uma função que receba 5 valores e calcule  e exiba a média aritmética. Também mostrar se o aluno foi aprovado ou reprovado (>= 6 {Aprovado}).  -->
+
+<script>
+
+function recebaValor(msg = "informe um valor"){
+    let valor = parseInt(prompt(msg));
+    return valor;
+}
+
+var v1 = recebaValor("informe o 1º valor");
+var v2 = recebaValor("informe o 2º valor");
+var v3 = recebaValor("informe o 3º valor");
+var v4 = recebaValor("informe o 4º valor");
+var v5 = recebaValor("informe o 5º valor");
+
+var media = (v1+v2+v3+v4+v5)/5;
+
+if(media >= 6){
+    document.write("sua média é: "+ media +"<br>");
+    document.write("aprovado")
+}
+else{
+    document.write("sua média é: "+ media);
+    document.write("reprovado")
+}
+
+
+
+
+
+</script>

@@ -1,0 +1,52 @@
+
+body{
+    text-align: center;
+}
+a:link {
+    text-decoration: none;
+    color:yellow;
+    font-weight: bold;
+    font-variant: small-caps;
+    font-size: 4em;
+}
+
+a:visited{
+    color:green;
+    font-style: italic;
+    font-variant: normal;
+}
+a:hover{
+    background-color: blue;
+    color: white;
+}
+
+h1 {
+font-family: "Comic Sans Ms";
+color: red;
+font-size: 3em;
+text-indent: 1em;
+letter-spacing: 1em;
+text-decoration: underline blueviolet;
+}
+
+h2{
+    font-family:"Times New Roman";
+    color: blue;
+    font-size: 2em;
+    text-decoration: overline yellow;
+}
+p{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: green;
+    font-size: 1em;
+    text-align: justify;
+    text-indent: 1em;
+    font-style: italic;
+    font-weight: bold;
+
+}
+h3{
+    text-decoration: line-through rgb(31, 221, 255);
+    color: indigo;
+    font-size: 3em;
+}

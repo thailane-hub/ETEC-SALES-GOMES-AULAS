@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo</title>
+    <script src="js/script.js" defer></script>
+    <style>
+        form div {
+            display: flex;
+            flex-direction: column;
+            margin-top: 5px;
+        }
+
+        main,
+        header {
+            max-width: 500px;
+            margin: auto;
+        }
+
+        .item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 5px;
+            border-bottom: 1px solid #ccc;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <form>
+            <fieldset>
+                <legend>Adicionar tarefa</legend>
+                <div>
+                    <label for="titulo">Título</label>
+                    <input type="text" name="titulo" id="titulo" minlength="2" autocomplete="off"
+                        placeholder="Digite o título" required>
+                </div>
+                <div>
+                    <label for="data">Data prevista</label>
+                    <input type="date" id="data" name="data" value="2024-01-01" required>
+                </div>
+                <button>
+                    Cadastrar
+                </button>
+                <button type="reset">
+                    Limpar
+                </button>
+            </fieldset>
+        </form>
+    </header>
+    <main>
+
+        <h1>Lista de tarefas</h1>
+
+        <input type="text" placeholder="Buscar tarefa" id="filtro" name="filtro">
+        <br>
+        <br>
+        <div id="container">   
+
+        </div>
+    </main>
+</body>
+
+</html>

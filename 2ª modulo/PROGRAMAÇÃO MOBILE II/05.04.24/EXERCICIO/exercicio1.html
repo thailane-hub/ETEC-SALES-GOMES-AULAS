@@ -1,0 +1,60 @@
+<!-- Exercício 1
+1 - Criar um formulário que contenha 2 campos numéricos, um botão e um parágrafo. Ao clicar no botão, a soma dos 2 valores digitados deverá ser apresentado no parágrafo. -->
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="exercicio1.js" defer></script>
+
+    <style>
+        body{
+            background-color: blue;
+            text-transform:uppercase;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: large;
+            height: 100vh;
+            width: 100%;
+            display: flex;
+
+        }
+
+        main{
+            margin: auto;
+            border-color: brown;
+            
+        }
+
+
+        fieldset{
+            background-color: gray;
+        }
+    </style>
+</head>
+<body>
+    <main>
+    <form>
+        <fieldset style="width:fit-content">
+            <legend>Calcular</legend>
+                <div>
+                    <label for="numero1" >Numero 1  </label>
+                    <input type="number" min="0" placeholder="digite o numero" id="numero1">
+            </div>
+            <div>
+                <label for="numero2">Numero 2 </label>
+                <input type="number" min="0" placeholder="digite o numero" id="numero2">
+            </div>
+            <div>
+                <button>Calcular</button>
+            </div>
+        </fieldset>
+    </form>
+    <p id="r">
+         a resposta vai aparecer aqui
+    </p>
+    </main>
+</body>
+</html>

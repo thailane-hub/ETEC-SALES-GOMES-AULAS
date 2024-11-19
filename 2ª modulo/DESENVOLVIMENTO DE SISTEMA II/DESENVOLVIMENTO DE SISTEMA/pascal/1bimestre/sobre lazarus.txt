@@ -1,0 +1,140 @@
+# Quais IDE poderemos utilizar?
+
+As mais conhecidas são:
+
+- Borland Delphi
+- Embarcadero Delphi
+- Lazarus (open source)
+----------------------------------------------------------------------------------------------------
+# IDE (Ambiente de Desenvolvimento Integrado)
+
+Um dos ambientes de desenvolvimento mais conhecidos que utiliza Object Pascal é o Delphi, 
+também criado pela Borland e posteriormente pela Embarcadero Technologies. O Delphi é uma
+ poderosa ferramenta de desenvolvimento que utiliza a linguagem Object Pascal como base. 
+Ele fornece uma IDE (Ambiente de Desenvolvimento Integrado) rico em recursos, permitindo que 
+os desenvolvedores criem aplicativos robustos para diversas plataformas.
+
+***************************************************************************************************************************
+
+# O que é Pascal?
+
+A **linguagem de programação Pascal** é uma linguagem de programação de alto 
+nível desenvolvida pelo suíço Niklaus Wirth na década de 1970
+
+***************************************************************************************************************************************
+# Uma característica da linguagem
+
+Uma das características distintivas do Pascal é sua sintaxe clara e estruturada, que favorece a 
+legibilidade do código. A linguagem promove a programação estruturada, 
+encorajando a organização lógica do código por meio de blocos, procedimentos e funções.
+
+
+***************************************************************************************************************************************
+
+# Evolução da linguagem Pascal - Object Pascal
+
+Object Pascal é uma extensão da linguagem de programação Pascal que incorpora conceitos de programação orientada a objetos (POO).
+
+A introdução de recursos de POO no Object Pascal permite aos desenvolvedores criar programas
+ mais modulares e reutilizáveis. Ele introduz conceitos fundamentais, como classes e objetos,
+ encapsulamento, herança e polimorfismo. Esses elementos fornecem uma abordagem
+ mais estruturada para o design de software, facilitando a manutenção e a expansão de código.
+
+
+
+***************************************************************************************************************************************
+
+
+# O que significa compilar um código?
+
+Compilar um programa em Pascal é o processo de traduzir o código-fonte escrito pelo programador
+ em linguagem Pascal para um formato executável compreensível pelo computador. Esse processo é 
+necessário porque os computadores não conseguem entender diretamente o código escrito pelos humanos; 
+eles precisam de instruções em linguagem de máquina.
+
+***************************************************************************************************************************************
+
+**program** teste;
+
+declarações de variáveis
+
+**begin**
+
+comandos
+
+**end.**
+
+onde :.
+
+- **program** - nome do programa
+- **begin** - início do programa
+- **end**. - fim do programa
+
+
+***************************************************************************************************************************************
+
+# Tipos de dados
+
+- integer
+- char
+- boolean
+- string
+- real
+
+
+***************************************************************************************************************************************
+
+# Variáveis
+
+São alocações representadas por identificador chave-valor
+
+**program teste;**
+
+**var**
+
+nota: real;
+
+salario: real;
+
+codigo: integer;
+
+letra1, letra2: char;
+
+nome: string;
+
+**begin**
+
+**comandos**
+
+**end.**
+
+***************************************************************************************************************************************
+# Tipos
+
+São declarações de alocações de tipos pré-definidos ou personalizados pelo programador.
+
+**program Teste;**
+
+**type**
+
+DIAS = (domingo, segunda, terca, quarta, quinta, sexta, sabado);
+
+**var**
+
+dias_da_semana: DIAS;
+
+**begin**
+
+dias_da_semana = janeiro; // irá ocasionar um erro visto que janeiro não pertence ao tipo dias
+
+**end.**
+
+***************************************************************************************************************************************
+
+
+
+***************************************************************************************************************************************
+
+
+
+***************************************************************************************************************************************

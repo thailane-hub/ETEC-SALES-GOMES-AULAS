@@ -1,0 +1,65 @@
+object Form1: TForm1
+  Left = 256
+  Height = 240
+  Top = 145
+  Width = 320
+  Caption = 'Form1'
+  ClientHeight = 240
+  ClientWidth = 320
+  LCLVersion = '3.2.0.0'
+  object GroupBox1: TGroupBox
+    Left = 8
+    Height = 128
+    Top = 8
+    Width = 304
+    Caption = 'Selecionar cor'
+    ClientHeight = 108
+    ClientWidth = 300
+    TabOrder = 0
+    object btnVermelho: TButton
+      Left = 8
+      Height = 25
+      Top = 8
+      Width = 75
+      Caption = 'Vermelho'
+      TabOrder = 0
+      OnClick = btnVermelhoClick
+      OnMouseEnter = btnVermelhoMouseEnter
+    end
+    object btnAzul: TButton
+      Left = 8
+      Height = 25
+      Top = 73
+      Width = 75
+      Caption = 'Azul'
+      TabOrder = 1
+      OnClick = btnAzulClick
+    end
+    object btnVerde: TButton
+      Left = 96
+      Height = 25
+      Top = 72
+      Width = 75
+      Caption = 'Verde'
+      TabOrder = 2
+      OnClick = btnVerdeClick
+    end
+    object btnAmarelo: TButton
+      Left = 96
+      Height = 25
+      Top = 8
+      Width = 75
+      Caption = 'Amarelo'
+      TabOrder = 3
+      OnClick = btnAmareloClick
+    end
+  end
+  object Panel1: TPanel
+    Left = 0
+    Height = 26
+    Top = 214
+    Width = 320
+    Caption = 'Panel1'
+    TabOrder = 1
+  end
+end

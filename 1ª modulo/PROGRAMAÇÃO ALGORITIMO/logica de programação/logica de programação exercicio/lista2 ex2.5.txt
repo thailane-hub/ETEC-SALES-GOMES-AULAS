@@ -1,0 +1,30 @@
+{# Exercício 2.5
+
+Elabore um programa que irá receber o nome de um mês, e exiba se o mês é do primeiro semestre ou segundo semestre.}
+
+Program HelloWorld(output);
+
+var ps: array [1..6] of string = ('janeiro','fevereiro','março','abril','maio','junho');
+    m: string;
+    i: integer;
+
+begin
+
+    write('Informe um mês: ');
+    read(m);
+    
+    for i:= 1 to 6 do 
+        begin
+            if m=ps [i] then
+                begin
+                    write(' primeiro semestre');
+                        exit;
+                end
+        end;      
+        
+    if m<>ps [i] then
+        begin
+            write(' segundo semestre');
+                exit;
+        end;
+end.

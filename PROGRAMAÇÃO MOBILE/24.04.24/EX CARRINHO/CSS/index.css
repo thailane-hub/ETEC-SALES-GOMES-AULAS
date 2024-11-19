@@ -1,0 +1,368 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;   
+}
+
+
+body{
+        font-family: "Roboto", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #0b0b0b;
+}
+
+
+
+header{
+    background-color: rgba(0, 0, 0, 0.315);
+    width: 100%;
+    height: 70px;
+    display: flex;
+}
+
+.cabecalho{
+    display: flex;
+    color: white;
+    width: 90%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    gap: 10px;
+    /* text-decoration: none; */
+}
+
+a:link{
+    text-decoration: none;
+}
+
+.logo img{
+    width: 48px;
+    height: 48px;
+
+}
+
+
+.atalho{
+    display: flex;
+    gap: 3rem;
+}
+
+.icon{
+    display: flex;
+    gap: 1rem;
+}
+
+.icon img{
+    width: 36px;
+    height: 36px;
+    filter: invert(100%);	
+}
+
+.menu{
+    display: flex;
+    gap: 1rem;
+}
+
+.atalho #button-login{
+    background-color:  rgba(255, 171, 0, 0.904);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 40px;
+    font-weight: bold;
+    border-radius: 10%;
+    border-style:  none;
+}
+
+
+main{
+    width: 90%;
+    margin-top: 3rem ;
+    margin-bottom: 5rem;
+    /* width: auto; */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+main .slide{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide img{
+    width:100%;
+}
+
+main .lista{
+    margin-top:2.5rem ;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    justify-content: center;
+}
+
+
+.item{
+    position: relative;
+    display: flex;
+}
+
+.item img{
+    width: 320px;
+    height: 320px;
+}
+
+.item .descricao{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.item .opcoes{
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.item .opcoes{
+    display: flex;
+    /* align-items: center; */
+    width: 100%;
+    visibility: hidden;
+    opacity: 0.5;
+    transition: all 300ms;
+    transform: translateY(50px);
+}
+
+.item:hover > .opcoes{
+    visibility: visible;
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+.op-lateral{
+    display: flex;
+    padding-right: 0.5rem;
+    padding-top: 2rem;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    align-items: end;
+}
+
+.op-lateral img{
+    width: 36px;
+    height: 36px;
+    background-color: rgba(255, 171, 0, 0.904);
+    filter: invert(10%);
+    border-radius: 50%;
+}
+.opcoes .btn-add{
+    margin: auto;
+    margin-top: 80px;
+    color: black;
+    width: 40%;
+    padding: 15px;
+    text-align: center;
+    border-style: none;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 10%;
+    background-color:  rgba(255, 171, 0, 0.904);
+}
+
+.item .descricao .preco .antigo{
+    color: gray;
+    text-decoration:line-through;
+}
+
+.preco{
+    display: flex;
+    gap: 0.5rem;
+}
+
+footer{
+    margin-top: auto;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.315);
+}
+
+footer .superior{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 5px;
+}
+
+
+.dados img{
+        width: 48px;
+        height: 48px;
+}
+
+.superior .dados{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.superior .informacoes{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.superior .servicos{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.superior .inscreva{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#linha{
+    display: flex;
+    margin: 1rem 6rem  0rem 6rem ;
+    border: 1px solid white;
+
+}
+
+.cartao img{
+width: 56px;
+height: 56px;
+}
+
+.inferior{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6rem;
+    margin: 0rem 6rem 0rem 0rem ;
+}
+
+.redes{
+    display: flex;
+    gap: 1rem;
+}
+
+/* Carrinho /////////////////////////////////////////////// */
+
+
+.checkout{
+    display: flex;
+    flex-direction: row;
+    gap: 10rem;
+    margin-top: 2rem;
+    align-items: flex-start;
+    justify-content: center;
+    
+}
+
+.checkout button{
+    background-color:  rgba(255, 171, 0, 0.904);
+    width: 40%;
+    padding: 15px;
+    text-align: center;
+    border-style: none;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 10%;
+}
+
+
+.produto-escolha{
+    display: flex;
+    gap: 2rem;
+    background-color: blue;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: 40rem;
+}
+
+.subtotal{
+    background-color: blueviolet;
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    padding: 1rem;
+    border: 1px solid white;
+    align-items: center;
+}
+
+.subtotal .topo{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.meio{
+    display: flex;
+    margin-top: 1   rem;
+    flex-direction: column;
+}
+
+.cupom{
+    display: flex;
+    gap:2px;
+    margin-top: 1rem;
+    align-items: center;
+}
+
+
+
+.meio input{
+    height: 2rem;
+}
+
+.entrega{
+    display: flex;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    justify-content: space-between;
+}
+
+.fim{
+    display: flex;
+
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+#sacola{
+    position: relative;
+}
+
+.spanqtd{
+    position: absolute;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-weight: bold;
+    font-size: 12px;
+    width: 50%;
+    height: 50%;
+    bottom: 0;
+    right: 0;
+    border-radius:50% ;
+}

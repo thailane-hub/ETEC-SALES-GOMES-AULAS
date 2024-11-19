@@ -1,0 +1,51 @@
+{# Exercício 2.8
+
+Faça um programa que irá receber três valores inteiros, e exiba os valores em ordem crescente.
+}
+
+Program HelloWorld(output);
+
+var a,b,c: integer;
+
+begin
+  
+    write('Informe o 1º valor: ');
+    read(a);
+    write('Informe o 2º valor: ');
+    read(b);
+    write('Informe o 3º valor: ');
+    read(c);
+
+    if (a<b) and (a<c) and(b<C) then
+        begin
+            write('A ordem crescente é: ',a,' ',b,' ',c);
+        end;
+        
+    if (a<b) and (a<c) and(c<b) then
+        begin
+            write('A ordem crescente é: ',a,' ',c,' ',b);
+        end;
+        
+    if (b<c) and (b<a) and(a<C) then
+        begin
+            write('A ordem crescente é: ',b,' ',a,' ',c);
+        end;
+        
+    if (b<c) and (b<a) and(c<a) then
+        begin
+            write('A ordem crescente é: ',b,' ',c,' ',a);
+        end;
+        
+    if (c<b) and (c<a) and(a<b) then
+        begin
+            write('A ordem crescente é: ',c,' ',a,' ',b);
+        end;
+        
+        
+    if (c<b) and (c<a) and(b<a) then
+        begin
+            write('A ordem crescente é: ',c,' ',b,' ',a);
+        end;
+        
+  
+end.

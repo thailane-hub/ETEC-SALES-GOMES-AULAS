@@ -1,0 +1,29 @@
+{4 - Crie um programa que irá receber uma idade e exiba a classificação se a pessoa é criança, adolescente, adulto ou idoso.}
+
+Program FaixaEtaria(output);
+var id:integer;
+begin
+  writeln('Informe a idade');
+  read(id);
+  
+  if id < 12 then
+  begin
+    write('criança');
+  end;
+  
+  if (id >= 12) and (id < 18) then
+  begin
+    write('adolescente');
+  end; 
+
+  if (id >= 18) and (id < 60) then
+  begin
+    write('adulto');
+  end;
+  
+  if id >= 60 then
+  begin
+    write('idoso');
+  end;
+
+end.

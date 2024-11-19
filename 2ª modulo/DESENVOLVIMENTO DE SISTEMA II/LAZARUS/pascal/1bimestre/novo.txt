@@ -1,0 +1,230 @@
+<script>
+
+        var venda,resultado;
+
+        venda = parseFloat(prompt("digite a qtd da venda: "));
+
+        if(venda < 12){
+            
+            resultado = venda * 1.30;
+            
+            alert(resultado);
+        }
+
+        else{
+            resultado = venda * 1;
+
+            alert(resultado);
+        }
+
+
+
+ </script>
+
+==========================================================================================
+
+<script>
+
+var nota1 = parseFloat(prompt("Digite a primeira nota: "))
+var nota2 = parseFloat(prompt("Digite a segunda nota: "))
+
+var media = (nota1 + nota2) / 2;
+
+if(media >= 6){
+    alert("aluno aprovado, genio");
+}else{
+    alert("Reprovado");
+}
+
+</script>
+
+==========================================================================================
+
+script>
+var anonascimento = parseInt(prompt("Digite seu ano de nascimento:  "))
+
+if(anonascimento<= 2006){
+    alert("pode votar");
+
+}
+else{
+    alert("não pode votar");
+}
+
+</script>
+===========================================================================================
+
+<script>
+
+    var v1,v2;
+
+    v1 = parseFloat(prompt("digite o numero "));
+    v2 = parseFloat(prompt("digite o numero "));
+    
+    
+    while(v2 == v1){
+        alert("digite um numero diferente do primeiro");
+        v2 = parseFloat(prompt("digite o numero "));
+    }
+
+    if(v1>v2){
+        alert(v1);
+    }
+
+    else{
+        alert(v2);
+    }
+
+
+</script>
+
+=====================================================================================
+
+<script>
+
+    var v1,v2;
+
+    v1 = parseFloat(prompt("digite o numero "));
+    v2 = parseFloat(prompt("digite o numero "));
+    
+    
+    while(v2 == v1){
+        alert("digite um numero diferente do primeiro");
+        v2 = parseFloat(prompt("digite o numero "));
+    }
+
+    if(v1>v2){
+        alert(v2+" "+v1);
+    }
+
+    else{
+        alert(v1+" "+v2);
+    }
+
+
+</script>
+
+============================================================================================
+
+
+<script>
+
+var jornadasemanal=  40;
+
+var jornadatotal = parseFloat(prompt("digite sua carga horária: "));
+var salariohora = parseFloat(prompt("digite o valor por hora: "));
+
+var mensal = 160;
+
+var horaextra = jornadatotal - mensal;
+
+if(jornadatotal > 160){
+
+    alert(jornadatotal * salariohora + (horaextra * salariohora/ 2));
+
+}
+else{
+    alert(jornadatotal * salariohora);
+}
+
+
+
+</script>
+
+======================================================================================
+
+    <script>
+
+var v1,v2,v3,v4,x,y,soma;
+
+x = 0;
+y= 0;
+
+v1 = parseFloat(prompt("informe o 1º valor "));
+v2 = parseFloat(prompt("informe o 2º valor "));
+v3 = parseFloat(prompt("informe o 3º valor "));
+v4 = parseFloat(prompt("informe o 4º valor "));
+
+
+if(v1>v2 && v1>v3 && v1>v4){
+    
+    x = v1;
+
+    if(v2>v3 && v2>v4){
+        y = v2;
+    }
+    
+    else if(v3>v2 && v3>v4){
+        y = v3;
+    }
+    
+    else{
+        y = v4;
+    }
+}
+
+
+if(v2>v1 && v2>v3 && v2>v4){
+    
+    x = v2;
+
+    if(v1>v3 && v1>v4){
+        y = v1;
+    }
+    
+    else if(v3>v1 && v3>v4){
+        y = v3;
+    }
+    
+    else{
+        y = v4;
+    }
+}
+
+
+if(v3>v1 && v3>v2 && v3>v4){
+    
+    x = v3;
+
+    if(v1>v2 && v1>v4){
+        y = v1;
+    }
+    
+    else if(v2>v1 && v2>v4){
+        y = v2;
+    }
+    
+    else{
+        y = v4;
+    }
+}
+
+if(v4>v1 && v4>v2 && v4>v3){
+    
+    x = v4;
+
+    if(v1>v2 && v1>v3){
+        y = v1;
+    }
+    
+    else if(v2>v1 && v2>v3){
+        y = v2;
+    }
+    
+    else{
+        y = v3;
+    }
+}
+
+soma = x+y;
+
+alert(soma);
+
+</script>
+====================================================================================
+
+
+============================================================================================
+
+
+

@@ -1,0 +1,85 @@
+object Form1: TForm1
+  Left = 482
+  Height = 468
+  Top = 132
+  Width = 440
+  BorderStyle = bsDialog
+  Caption = 'Form1'
+  ClientHeight = 468
+  ClientWidth = 440
+  Color = clRed
+  DesignTimePPI = 120
+  LCLVersion = '3.2.0.0'
+  object Button1: TButton
+    Left = 170
+    Height = 32
+    Top = 392
+    Width = 94
+    Caption = 'Sortear'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 0
+    OnClick = Button1Click
+  end
+  object Label1: TLabel
+    Left = 122
+    Height = 28
+    Top = 264
+    Width = 187
+    Caption = 'Numeros Sorteados'
+    Font.Height = -20
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Label2: TLabel
+    Left = 48
+    Height = 28
+    Top = 100
+    Width = 343
+    Caption = 'Informe os  seus numeros de 0 a 30 '
+    Font.Height = -20
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Edit4: TEdit
+    Left = 114
+    Height = 28
+    Top = 152
+    Width = 44
+    TabOrder = 1
+  end
+  object Edit5: TEdit
+    Left = 202
+    Height = 28
+    Top = 152
+    Width = 44
+    TabOrder = 2
+  end
+  object Edit6: TEdit
+    Left = 290
+    Height = 28
+    Top = 152
+    Width = 44
+    TabOrder = 3
+  end
+  object Edit7: TEdit
+    Left = 122
+    Height = 36
+    Top = 312
+    Width = 190
+    Alignment = taCenter
+    Font.Height = -20
+    ParentFont = False
+    TabOrder = 4
+  end
+  object Label3: TLabel
+    Left = 178
+    Height = 28
+    Top = 16
+    Width = 80
+    Caption = 'LOTERIA'
+    Font.Height = -20
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+end

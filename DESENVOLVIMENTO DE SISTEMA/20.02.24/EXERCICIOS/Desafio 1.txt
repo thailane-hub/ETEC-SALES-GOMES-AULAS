@@ -1,0 +1,26 @@
+Program HelloWorld(output);
+var qi: integer;
+begin
+  write('Qual o QI ');
+  read(qi);
+    if qi < 50 then
+    begin
+      write('Qi de Macaco');
+    end;
+      
+    if (qi >= 50) and (qi <=60) then
+    begin
+        write('Qi de Humano');
+    end;
+    
+    if (qi >=61) and (qi <=100) then
+    begin
+        write('Qi de Humano Evoluido');
+    end;
+    
+    if (qi >100) then
+    begin
+        write ('Qi de Alienigina');
+    end;
+                            
+end.

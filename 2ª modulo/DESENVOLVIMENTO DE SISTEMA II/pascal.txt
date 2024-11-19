@@ -1,0 +1,50 @@
+aula 21/05
+
+
+border style none tira borda bsDialog
+
+position desktop center sempre que inicia fica no centro
+auto size 
+primeiro criar variavel
+valor1 do tipo string
+valor 2 string
+resultado string 
+operador string
+cast ver
+criar procedure
+  { TForm1 }  pode criar dentro do formulario
+
+e var tbem
+agora te que criar no implementation   
+valor1 recebe n1
+clica 2vx no numero 
+trocar nome de  imagem 6 para btn7 na propriedade name 
+
+
+
+p:= v1 + (v1*(v2/100));
+
+04/05
+para ativar um botao em formato de imagem
+primeiro renomear as imagens
+depois criar uma procedure nomeei como entrada abrir parentese (numero(variavel qualquer):string) quando recebe nap tem como saber o que é 
+no tform 1 em qualquer lugar criar a procedure entrada
+procedure entrada (numero:string);
+begin
+
+end;
+  
+fazer o acumulador
+ 
+valor1(não existe valor apartir do momento que o usuario digitar irá existir):=valor1(vai acomular começa com 0)+(é pra somar)numero(variavel da entrada);
+
+criar uma label para receber os dados:  
+uma propriedade para escrever dentro da label   label1.caption:= valor1; 
+
+criar os parametros nos numeros
+
+procedure TForm1.bnt9Click(Sender: TObject);
+begin
+    Form1.entrada('9');
+end; 
+      

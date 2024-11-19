@@ -1,0 +1,16 @@
+Utilizar 4 Controllers 
+
+php spark make:controller Why
+
+Home (index)
+Why (index)
+Trainer (index)
+Contact (index)
+
+Rotas
+/ -> Home::index
+/why -> Why::index
+/trainer -> Trainer::index
+/Contact -> Contact::index
+
+

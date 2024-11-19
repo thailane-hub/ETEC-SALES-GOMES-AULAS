@@ -1,0 +1,226 @@
+{1- Escreva um programa que imprima os números de 1 a 10 usando uma estrutura WHILE.}
+
+Program HelloWorld(output);
+
+var i: integer;
+
+begin
+    
+    i:=1;
+    
+    while (i<=10) do
+        begin
+            writeln(i);
+            i := i+1;
+        
+        end;
+
+end.
+
+----------------------------------------------------------------------------------------------------------------------
+{1- Escreva um programa que imprima os números de 1 a 10 usando uma estrutura FOR.}
+
+Program HelloWorld(output);
+
+var i: integer;
+
+begin
+    
+    for i:= 1 to 10 do
+        begin
+            writeln(i);
+        end;
+
+end.
+
+----------------------------------------------------------------------------------------------------------------------
+
+{2-Crie um programa que solicite ao usuário um número e, em seguida, imprima a tabuada desse número usando uma estrutura WHILE.}
+
+Program HelloWorld(output);
+
+var i: integer;
+    n:real;
+    r:real;
+
+begin
+
+    write('Informe um numero que você deseje a tabuada: ');
+    read(n);
+    
+    i:=0;
+    
+    while (i<=9) do
+        begin
+            i:=i+1;
+            r:=i*n;
+        writeln(i,' * ',n:0:0,' = ',r:0:2);
+        
+        end;
+
+end.
+
+--------------------------------------------------------------------------------------------------------------------------
+{2-Crie um programa que solicite ao usuário um número e, em seguida, imprima a tabuada desse número usando uma estrutura for.}
+
+Program HelloWorld(output);
+
+var i: integer;
+    n:real;
+    r:real;
+
+begin
+
+    write('Informe um numero que você deseje a tabuada: ');
+    read(n);
+    
+    for i:=1 to 10 do
+        begin
+            r:=i*n;
+        writeln(i,' * ',n:0:0,' = ',r:0:2);
+        
+        end;
+
+end.
+
+--------------------------------------------------------------------------------------------------------------------------
+
+{3- Desenvolva um programa que imprima todos os números pares entre 1 e 100 usando uma estrutura while e outra com a estrutura While.}
+
+{# Resto de divisão (módulo)
+
+## resultado := numero1 mod numero2}
+
+Program HelloWorld(output);
+
+var i: integer;
+    n:real;
+    r:real;
+
+begin
+
+    i:=0;
+    
+    while (i<=99) do
+        begin
+            i:=i+1;
+            r:= i mod 2;
+            
+            if r = 0 then
+                begin
+                    write(i,' ');
+                end;
+        
+        end;
+
+end.
+----------------------------------------------------------------------------------------------------------------------
+{3- Desenvolva um programa que imprima todos os números pares entre 1 e 100 usando uma estrutura while e outra com a estrutura for.}
+
+{# Resto de divisão (módulo)
+
+## resultado := numero1 mod numero2}
+
+Program HelloWorld(output);
+
+var i: integer;
+    r:real;
+
+begin
+
+    for i:=1 to 100 do
+        begin
+            r:= i mod 2;
+            
+            if r = 0 then
+                begin
+                    write(i,' ');
+                end;
+        
+        end;
+
+end.
+
+------------------------------------------------------------------------------------------------------------------------------------------
+
+{Declare dois arrays com 5 elementos cada. Preencha o primeiro array com os valores, e em seguida, faça um algoritmo para transportar todos os valores para o outro array. Exiba os dois arrays logo em seguida.}
+
+Program HelloWorld(output);
+
+var primeiro,segundo: array[1..5] of integer;
+    contador,inicio,fim: integer;
+    
+begin
+
+inicio:=1;
+fim:=5;
+
+    
+    for contador:= inicio to fim do
+    begin
+        write('Digite o ',contador,'º numero: ');
+        read(primeiro[contador]);
+    end;
+    
+    
+        for contador:= inicio to fim do
+    begin
+        segundo[contador]:= primeiro[contador];
+    end;
+        
+        for contador:= inicio to fim do
+    begin
+        write(' ',primeiro[contador]);
+        
+    end;
+    
+        for contador:= inicio to fim do
+    begin
+        write('  ',segundo[contador]);
+        
+    end;
+
+end.
+-----------------------------------------------------------------------------------------------------------------
+{Declare dois arrays com 5 elementos cada. Preencha o primeiro array com os valores, e em seguida, faça um algoritmo para transportar todos os valores para o outro array. Exiba os dois arrays logo em seguida.}
+
+Program HelloWorld(output);
+
+var primeiro,segundo: array[1..5] of integer;
+    contador,inicio,fim: integer;
+    
+begin
+
+inicio:=1;
+fim:=5;
+
+    
+    for contador:= inicio to fim do
+    begin
+        write('Digite o ',contador,'º numero: ');
+        read(primeiro[contador]);
+    end;
+    
+    
+        for contador:= inicio to fim do
+    begin
+        segundo[contador]:= primeiro[contador];
+    end;
+        
+        for contador:= inicio to fim do
+    begin
+        write(' ',primeiro[contador]);
+        
+    end;
+    
+        for contador:= inicio to fim do
+    begin
+        write('  ',segundo[contador]);
+        
+    end;
+
+end.
+----------------------------------------------------------------------------------------------------------------------------------------------
+
+
+

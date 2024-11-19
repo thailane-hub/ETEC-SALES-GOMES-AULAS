@@ -1,0 +1,22 @@
+{3 - Crie um programa que irá receber um número inteiro, e exiba se o número é positivo, negativo ou igual a zero.}
+Program PositivoOuNegativo(output);
+var n:real;
+begin
+  write('Informe um numero ');
+  read(n);
+  
+  if n < 0 then
+  begin
+    write('Negativo');
+  end;
+  
+  if n = 0 then
+  begin
+    write('Igual a Zero');
+  end;  
+
+  if n > 0 then
+  begin
+    write('Positivo');
+  end;
+end.

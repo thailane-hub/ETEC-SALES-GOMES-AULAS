@@ -1,0 +1,14 @@
+-json - forma de estruturar dados em forma de texto
+
+-operador ternalio - é um if e else resumido    ?  :
+
+exemplo:
+const resposta = x > y ?"sim":"não";
+
+
+
+-JSON.stringify: transforma em string
+
+-JSON.parse: transforma a string em um objeto/array javascript
+
+

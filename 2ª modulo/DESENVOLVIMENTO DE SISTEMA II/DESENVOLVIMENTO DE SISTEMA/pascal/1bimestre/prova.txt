@@ -1,0 +1,34 @@
+program prova;
+var numero: array[1..3,1..3] of integer;
+ inicio,primeiro,segundo,fim,i,j: integer;
+
+begin
+inicio:=1;
+fim:=3;
+primeiro:=1;
+segundo:=4;
+
+    for i:= primeiro to segundo do
+     begin
+        for j:= inicio to fim do
+        begin
+            write('Informe o numero: ');
+            readln(numero[i,j]);
+        end;
+    end;
+        
+        for i:= primeiro to segundo do
+     begin
+        for j:= inicio to fim do
+        begin
+            write('',numero[i,j]);
+        end;
+            writeln(); 
+    end;
+    
+     for i:= inicio to fim do
+        begin
+            write('');
+        end;
+
+end.

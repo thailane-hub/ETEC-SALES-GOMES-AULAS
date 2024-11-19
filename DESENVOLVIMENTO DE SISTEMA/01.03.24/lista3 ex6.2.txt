@@ -1,0 +1,19 @@
+{6-2Escreva um programa que irá imprimir um quadrado de asteriscos. O tamanho do quadrado será informado pelo usuário.}
+
+Program HelloWorld(output);
+
+var h,t,l:integer;
+
+begin
+  writeln('informe o tamanho do quadrado');
+  read(t);
+  
+  for l:=1 to t do
+    begin
+        for h:=1 to t do
+            begin
+                write('*');
+            end;
+                writeln();
+    end;
+end.

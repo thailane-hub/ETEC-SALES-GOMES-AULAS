@@ -1,0 +1,24 @@
+input cria um campo de texto para o usuario
+tem o type text para textos, o type date q é unico para datas, email para email, file para envio de arquivo, datetime para data e  hora
+e uma das infinidades, o type checkbox
+
+autocomplete: sugestões... as vezes mesmo com autocomplete off, o navegador pode tentar te sugerir algo
+
+maxLength: Máximo de Caracteres
+minLength: Se estivesse em um formulário, ele somente faria a action se tiver o minimo de caracteres
+
+required: deixa o campo como obrigatório
+
+type number: quantidade, combinado com max e minLength permite minima e maxima quantidade
+
+placeholder: deixa um texto padrao ao usuario até ele digitar algo
+
+value: se inserido, o campo começará com um valor padrao/inicial (o que voce colocou)
+
+type checkbox: check
+checked: deixa habilitado o campo checkbox
+
+--------------------------------------------
+
+label
+for: utiliza o nome do id para se vincular ao campo(input)                                                                 

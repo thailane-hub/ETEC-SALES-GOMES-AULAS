@@ -1,0 +1,34 @@
+{# Exercício 2.3
+
+Elabore um programa que irá receber a nota do aluno de 0 a 10, e exiba se o aluno está aprovado, reprovado ou de recuperação.
+
+- Nota < 6 reprovado
+- Nota entre 6 e 7 recuperação
+- Nota > 7 aprovado
+}
+
+Program HelloWorld(output);
+
+var nota: real;
+
+begin
+
+    writeln('Informe a nota do aluno');
+    read(nota);
+    
+    if nota < 6 then
+        begin
+            write(' Reprovado');
+        end;    
+            
+    if nota >7 then
+        begin
+            write(' Aprovado');
+        end;
+        
+    if (nota >= 6) and (nota <=7) then
+        begin
+            write(' Recuperação');
+        end;
+            
+end.

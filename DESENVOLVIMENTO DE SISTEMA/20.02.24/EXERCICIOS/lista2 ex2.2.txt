@@ -1,0 +1,61 @@
+{# Exercício 2.2
+
+Crie um algoritmo em Pascal resolvendo as equações lógicas abaixo e exibindo se o resultado é positivo ou negativo na tela.
+
+**Considerando:**
+
+    **A = 10**
+
+    **B = 5**
+
+    **C = 2**
+
+Então:.
+
+1. B == A (false)
+2. A != B
+3. B != A
+4. !(A != B)
+5. A <= B + C
+6. A >= B + C
+7. (B == C && A == B) || (A == B && B != C) || (A == C && B != C) (?)
+8. (A mod B == 0) && (C mod B == 1)
+}
+
+
+Program HelloWorld(output);
+
+var a,b,c:integer;
+    r: boolean;
+
+begin
+
+    A:= 10;
+    B:= 5;
+    C:= 2;
+    
+    R:= B=A;
+    writeln('1: ',R);
+    
+    R:= A<> B;
+    writeln('2: ',R);
+   
+    R:= B <> A;
+    writeln('3: ',R);
+
+    R:= not(A <> B);
+    writeln('4: ',R);
+
+    R:= A <= B + C;
+    writeln('5: ',R);
+    
+    R:= A >=  + C;
+    writeln('6: ',R);
+    
+    R:= ((B = C)and (A = B)) or ((A = B) and (B <> C)) or ((A = C) and (B <> C));
+    writeln('7: ',R);
+    
+    R:= (A mod B = 0) and (C mod B = 1);
+    writeln('8: ',R);
+    
+end.

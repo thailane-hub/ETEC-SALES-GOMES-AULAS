@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <Compiler Value="D:\lazaros\fpc\3.2.2\bin\x86_64-win64\fpc.exe" Date="1482330472"/>
+  <Params Value=" -MObjFPC -Scghi -O1 -gw3 -gl -WG -l -vewnhibq &quot;-FiD:\ETEC SALES\2ª modulo\DIOGO\DS\calculadora professor\CALCULADORA LAZARUS\lib\x86_64-win64&quot; -FuD:\lazaros\lcl\units\x86_64-win64\win32 -FuD:\lazaros\lcl\units\x86_64-win64 -FuD:\lazaros\components\freetype\lib\x86_64-win64 -FuD:\lazaros\components\lazutils\lib\x86_64-win64 -FuD:\lazaros\packager\units\x86_64-win64 &quot;-FuD:\ETEC SALES\2ª modulo\DIOGO\DS\calculadora professor\CALCULADORA LAZARUS\&quot; &quot;-FUD:\ETEC SALES\2ª modulo\DIOGO\DS\calculadora professor\CALCULADORA LAZARUS\lib\x86_64-win64\&quot; &quot;-FED:\ETEC SALES\2ª modulo\DIOGO\DS\calculadora professor\CALCULADORA LAZARUS\&quot; &quot;-oD:\ETEC SALES\2ª modulo\DIOGO\DS\calculadora professor\CALCULADORA LAZARUS\project1.exe&quot; -dLCL -dLCLwin32 project1.lpr"/>
+</CONFIG>
